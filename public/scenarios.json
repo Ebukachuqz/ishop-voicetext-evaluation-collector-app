@@ -1,0 +1,2649 @@
+{
+  "schema_version": "2.1",
+  "collection_id": "final-spoken-elicitation-v3-speaker-friendly",
+  "status": "unrecorded_scenario_briefs_not_a_frozen_evaluation_dataset",
+  "catalogue": [
+    {
+      "product_id": "P1",
+      "name": "Blue T-shirt",
+      "color": "blue",
+      "price_ngn": 10000,
+      "available": true
+    },
+    {
+      "product_id": "P2",
+      "name": "Black T-shirt",
+      "color": "black",
+      "price_ngn": 15000,
+      "available": true
+    },
+    {
+      "product_id": "P3",
+      "name": "Mint Green T-shirt",
+      "color": "mint",
+      "price_ngn": 18000,
+      "available": true
+    },
+    {
+      "product_id": "P4",
+      "name": "Coral T-shirt",
+      "color": "coral",
+      "price_ngn": 22000,
+      "available": true
+    },
+    {
+      "product_id": "P5",
+      "name": "Sunshine Yellow Hoodie",
+      "color": "yellow",
+      "price_ngn": 28000,
+      "available": true
+    },
+    {
+      "product_id": "P6",
+      "name": "Lavender Tote Bag",
+      "color": "lavender",
+      "price_ngn": 9000,
+      "available": true
+    }
+  ],
+  "languages": [
+    {
+      "id": "en",
+      "label": "English"
+    },
+    {
+      "id": "pcm",
+      "label": "Nigerian Pidgin"
+    },
+    {
+      "id": "en_pcm",
+      "label": "English–Pidgin code-switching"
+    }
+  ],
+  "recording_instructions": {
+    "unit": "One shopper-turn recording per user slot; assistant turns are fixed text.",
+    "order": "Record all turns of a scenario in one language, then create its other language versions with the same intent.",
+    "state": "Displayed state is the trusted state at the final decision point, not a live cart changed by recordings.",
+    "transcription": "Compare STT text against your recording; correct recognition errors without removing spoken repetitions, repairs or discourse markers.",
+    "revision": "If the recording deviates from the brief, flag it and re-record or explicitly resolve the intended meaning. No AI rewriting.",
+    "language": "Use natural varieties, not caricatures. Shared product names, amounts and loanwords are acceptable; labels are intended conditions, not claims of linguistic purity."
+  },
+  "scenarios": [
+    {
+      "id": "F01",
+      "context_group": "FB01",
+      "pair_role": "A",
+      "title": "Still thinking about the blue shirt",
+      "family": "deferred_interest",
+      "setting": {
+        "en": "You are shopping here. Look at your basket and any earlier changes shown above. Read each card and say what you would say to Drake.",
+        "pcm": "You dey shop for here. Check wetin dey your basket and wetin don happen before. Read each card, talk wetin you go tell Drake.",
+        "en_pcm": "You dey shop here. Look at your basket and any earlier changes above. Read each card and tell Drake what you want, in your own words."
+      },
+      "initial_state": {
+        "cart": {},
+        "pending": null,
+        "receipts": []
+      },
+      "dialogue_slots": [
+        {
+          "role": "user",
+          "brief": {
+            "en": "Explain that you are choosing a shirt for an outing and are considering blue, but have not decided to put anything in the cart yet.",
+            "pcm": "Talk say you dey choose shirt for outing, blue dey your mind, but you never decide make anything enter cart yet.",
+            "en_pcm": "Explain say you dey choose a shirt for an outing; blue interests you, but you never decide to add anything yet."
+          },
+          "slot_id": "F01_u1"
+        },
+        {
+          "role": "assistant",
+          "content": "The Blue T-shirt costs ₦10,000 and the Black T-shirt costs ₦15,000. Both are available. Your cart is empty; nothing has been added."
+        },
+        {
+          "role": "user",
+          "brief": {
+            "en": "Discuss liking the blue shirt and possibly buying one, then make clear you are still deciding and the assistant should wait for a later instruction before adding it.",
+            "pcm": "Yarn say blue shirt dey sweet you, you fit buy one, but you still dey reason am; make assistant wait till you talk before e add am.",
+            "en_pcm": "Say you like the blue shirt and might buy one, but you still dey decide; make the assistant wait until you tell am to add it."
+          },
+          "slot_id": "F01_u2"
+        }
+      ],
+      "elicitation_notes": {
+        "en": "Use your own spoken wording. Keep the intended product, amount, timing and final decision. Hesitations and repairs are welcome when natural; do not read a polished script.",
+        "pcm": "Talk am as you dey talk normally. Keep di product, number, time and final decision. If you repeat word or correct yourself naturally, leave am; no force am.",
+        "en_pcm": "Use your normal speaking style. Keep di product, quantity, timing and final decision. You fit repeat or correct yourself naturally; no force extra fillers."
+      },
+      "language_versions": [
+        {
+          "language": "en",
+          "record_id": "F01_en"
+        },
+        {
+          "language": "pcm",
+          "record_id": "F01_pcm"
+        },
+        {
+          "language": "en_pcm",
+          "record_id": "F01_en_pcm"
+        }
+      ],
+      "status": "brief_only_not_evaluation_input"
+    },
+    {
+      "id": "F02",
+      "context_group": "FB01",
+      "pair_role": "B",
+      "title": "Ready to choose the blue shirt",
+      "family": "explicit_permission",
+      "setting": {
+        "en": "You are shopping here. Look at your basket and any earlier changes shown above. Read each card and say what you would say to Drake.",
+        "pcm": "You dey shop for here. Check wetin dey your basket and wetin don happen before. Read each card, talk wetin you go tell Drake.",
+        "en_pcm": "You dey shop here. Look at your basket and any earlier changes above. Read each card and tell Drake what you want, in your own words."
+      },
+      "initial_state": {
+        "cart": {},
+        "pending": null,
+        "receipts": []
+      },
+      "dialogue_slots": [
+        {
+          "role": "user",
+          "brief": {
+            "en": "Explain that you are choosing a shirt for an outing and are considering blue, but have not decided to put anything in the cart yet.",
+            "pcm": "Talk say you dey choose shirt for outing, blue dey your mind, but you never decide make anything enter cart yet.",
+            "en_pcm": "Explain say you dey choose a shirt for an outing; blue interests you, but you never decide to add anything yet."
+          },
+          "slot_id": "F02_u1"
+        },
+        {
+          "role": "assistant",
+          "content": "The Blue T-shirt costs ₦10,000 and the Black T-shirt costs ₦15,000. Both are available. Your cart is empty; nothing has been added."
+        },
+        {
+          "role": "user",
+          "brief": {
+            "en": "Refer back to your hesitation, say you have now decided on blue, and ask the assistant to add exactly one blue shirt now. You can repeat your final choice naturally.",
+            "pcm": "Refer to how you dey reason am before; now you don choose blue, make assistant add just one blue shirt now. You fit repeat di final choice naturally.",
+            "en_pcm": "Refer back to your hesitation, say you don decide on blue, and ask am to add exactly one blue shirt now."
+          },
+          "slot_id": "F02_u2"
+        }
+      ],
+      "elicitation_notes": {
+        "en": "Use your own spoken wording. Keep the intended product, amount, timing and final decision. Hesitations and repairs are welcome when natural; do not read a polished script.",
+        "pcm": "Talk am as you dey talk normally. Keep di product, number, time and final decision. If you repeat word or correct yourself naturally, leave am; no force am.",
+        "en_pcm": "Use your normal speaking style. Keep di product, quantity, timing and final decision. You fit repeat or correct yourself naturally; no force extra fillers."
+      },
+      "language_versions": [
+        {
+          "language": "en",
+          "record_id": "F02_en"
+        },
+        {
+          "language": "pcm",
+          "record_id": "F02_pcm"
+        },
+        {
+          "language": "en_pcm",
+          "record_id": "F02_en_pcm"
+        }
+      ],
+      "status": "brief_only_not_evaluation_input"
+    },
+    {
+      "id": "F03",
+      "context_group": "FB02",
+      "pair_role": "A",
+      "title": "Any shirts below 8,000 naira?",
+      "family": "filtered_enquiry",
+      "setting": {
+        "en": "You are shopping here. Look at your basket and any earlier changes shown above. Read each card and say what you would say to Drake.",
+        "pcm": "You dey shop for here. Check wetin dey your basket and wetin don happen before. Read each card, talk wetin you go tell Drake.",
+        "en_pcm": "You dey shop here. Look at your basket and any earlier changes above. Read each card and tell Drake what you want, in your own words."
+      },
+      "initial_state": {
+        "cart": {},
+        "pending": null,
+        "receipts": []
+      },
+      "dialogue_slots": [
+        {
+          "role": "user",
+          "brief": {
+            "en": "Explain that you are comparing shirt prices for a budget and first want to know what the shop sells.",
+            "pcm": "Explain say you dey compare shirt price because of budget; first you wan know wetin shop get.",
+            "en_pcm": "Explain say you dey compare shirt prices for your budget and first want to know what the shop has."
+          },
+          "slot_id": "F03_u1"
+        },
+        {
+          "role": "assistant",
+          "content": "We have a Blue T-shirt for ₦10,000 and a Black T-shirt for ₦15,000. Both are available. No cart action is pending."
+        },
+        {
+          "role": "user",
+          "brief": {
+            "en": "Explain your budget is strictly below ₦8,000 and ask whether any T-shirt meets it. Make this a question about availability within that budget, not an instruction to buy or add anything.",
+            "pcm": "Talk say your budget no reach ₦8,000, ask whether dem get any T-shirt wey dey under 8k. Na wetin dey available you wan know, you no dey send make dem buy or add anything.",
+            "en_pcm": "Explain your budget is under ₦8,000, then ask if una get any T-shirt under that amount. You only want availability information, no addition request."
+          },
+          "slot_id": "F03_u2"
+        }
+      ],
+      "elicitation_notes": {
+        "en": "Use your own spoken wording. Keep the intended product, amount, timing and final decision. Hesitations and repairs are welcome when natural; do not read a polished script.",
+        "pcm": "Talk am as you dey talk normally. Keep di product, number, time and final decision. If you repeat word or correct yourself naturally, leave am; no force am.",
+        "en_pcm": "Use your normal speaking style. Keep di product, quantity, timing and final decision. You fit repeat or correct yourself naturally; no force extra fillers."
+      },
+      "language_versions": [
+        {
+          "language": "en",
+          "record_id": "F03_en"
+        },
+        {
+          "language": "pcm",
+          "record_id": "F03_pcm"
+        },
+        {
+          "language": "en_pcm",
+          "record_id": "F03_en_pcm"
+        }
+      ],
+      "status": "brief_only_not_evaluation_input"
+    },
+    {
+      "id": "F04",
+      "context_group": "FB02",
+      "pair_role": "B",
+      "title": "Any shirts below 12,000 naira?",
+      "family": "filtered_enquiry",
+      "setting": {
+        "en": "You are shopping here. Look at your basket and any earlier changes shown above. Read each card and say what you would say to Drake.",
+        "pcm": "You dey shop for here. Check wetin dey your basket and wetin don happen before. Read each card, talk wetin you go tell Drake.",
+        "en_pcm": "You dey shop here. Look at your basket and any earlier changes above. Read each card and tell Drake what you want, in your own words."
+      },
+      "initial_state": {
+        "cart": {},
+        "pending": null,
+        "receipts": []
+      },
+      "dialogue_slots": [
+        {
+          "role": "user",
+          "brief": {
+            "en": "Explain that you are comparing shirt prices for a budget and first want to know what the shop sells.",
+            "pcm": "Explain say you dey compare shirt price because of budget; first you wan know wetin shop get.",
+            "en_pcm": "Explain say you dey compare shirt prices for your budget and first want to know what the shop has."
+          },
+          "slot_id": "F04_u1"
+        },
+        {
+          "role": "assistant",
+          "content": "We have a Blue T-shirt for ₦10,000 and a Black T-shirt for ₦15,000. Both are available. No cart action is pending."
+        },
+        {
+          "role": "user",
+          "brief": {
+            "en": "Explain your budget is strictly below ₦12,000 and ask whether any T-shirt meets it. You only want the matching options and their prices, not an addition to your cart.",
+            "pcm": "Talk say your budget no reach ₦12,000, ask whether dem get T-shirt wey dey under 12k. Na option and price you wan hear; no be make dem add am.",
+            "en_pcm": "Explain your budget is under ₦12,000 and ask which T-shirts fit. You only want options and prices, no cart addition."
+          },
+          "slot_id": "F04_u2"
+        }
+      ],
+      "elicitation_notes": {
+        "en": "Use your own spoken wording. Keep the intended product, amount, timing and final decision. Hesitations and repairs are welcome when natural; do not read a polished script.",
+        "pcm": "Talk am as you dey talk normally. Keep di product, number, time and final decision. If you repeat word or correct yourself naturally, leave am; no force am.",
+        "en_pcm": "Use your normal speaking style. Keep di product, quantity, timing and final decision. You fit repeat or correct yourself naturally; no force extra fillers."
+      },
+      "language_versions": [
+        {
+          "language": "en",
+          "record_id": "F04_en"
+        },
+        {
+          "language": "pcm",
+          "record_id": "F04_pcm"
+        },
+        {
+          "language": "en_pcm",
+          "record_id": "F04_en_pcm"
+        }
+      ],
+      "status": "brief_only_not_evaluation_input"
+    },
+    {
+      "id": "F05",
+      "context_group": "FB03",
+      "pair_role": "A",
+      "title": "Only if the blue shirt fits my budget",
+      "family": "conditional_permission",
+      "setting": {
+        "en": "You are shopping here. Look at your basket and any earlier changes shown above. Read each card and say what you would say to Drake.",
+        "pcm": "You dey shop for here. Check wetin dey your basket and wetin don happen before. Read each card, talk wetin you go tell Drake.",
+        "en_pcm": "You dey shop here. Look at your basket and any earlier changes above. Read each card and tell Drake what you want, in your own words."
+      },
+      "initial_state": {
+        "cart": {},
+        "pending": null,
+        "receipts": []
+      },
+      "dialogue_slots": [
+        {
+          "role": "user",
+          "brief": {
+            "en": "Explain that you want one blue shirt only if it fits your price limit; ask the assistant to wait while you state that limit.",
+            "pcm": "Explain say na one blue shirt you want if e enter your price limit; make assistant wait as you wan talk di limit.",
+            "en_pcm": "Explain say you want one blue shirt only if it fits your budget; ask am to wait for your price limit."
+          },
+          "slot_id": "F05_u1"
+        },
+        {
+          "role": "assistant",
+          "content": "The Blue T-shirt costs ₦10,000. I have not added it. Tell me when you would want me to add it."
+        },
+        {
+          "role": "user",
+          "brief": {
+            "en": "Set a strict price limit of ₦8,000: ask for one blue shirt to be added only if its price for one shirt is below that amount. Otherwise leave the cart unchanged. Make the condition clear in your own spoken wording.",
+            "pcm": "Set price limit of ₦8,000: make dem add one blue shirt only if one no reach that amount. If e no pass di condition, leave cart as e dey. Talk di condition as you go normally talk am.",
+            "en_pcm": "Give a strict ₦8,000 limit: add one blue shirt only if its unit price dey below that amount; otherwise leave the cart alone."
+          },
+          "slot_id": "F05_u2"
+        }
+      ],
+      "elicitation_notes": {
+        "en": "Use your own spoken wording. Keep the intended product, amount, timing and final decision. Hesitations and repairs are welcome when natural; do not read a polished script.",
+        "pcm": "Talk am as you dey talk normally. Keep di product, number, time and final decision. If you repeat word or correct yourself naturally, leave am; no force am.",
+        "en_pcm": "Use your normal speaking style. Keep di product, quantity, timing and final decision. You fit repeat or correct yourself naturally; no force extra fillers."
+      },
+      "language_versions": [
+        {
+          "language": "en",
+          "record_id": "F05_en"
+        },
+        {
+          "language": "pcm",
+          "record_id": "F05_pcm"
+        },
+        {
+          "language": "en_pcm",
+          "record_id": "F05_en_pcm"
+        }
+      ],
+      "status": "brief_only_not_evaluation_input"
+    },
+    {
+      "id": "F06",
+      "context_group": "FB03",
+      "pair_role": "B",
+      "title": "The blue shirt fits my budget",
+      "family": "conditional_permission",
+      "setting": {
+        "en": "You are shopping here. Look at your basket and any earlier changes shown above. Read each card and say what you would say to Drake.",
+        "pcm": "You dey shop for here. Check wetin dey your basket and wetin don happen before. Read each card, talk wetin you go tell Drake.",
+        "en_pcm": "You dey shop here. Look at your basket and any earlier changes above. Read each card and tell Drake what you want, in your own words."
+      },
+      "initial_state": {
+        "cart": {},
+        "pending": null,
+        "receipts": []
+      },
+      "dialogue_slots": [
+        {
+          "role": "user",
+          "brief": {
+            "en": "Explain that you want one blue shirt only if it fits your price limit; ask the assistant to wait while you state that limit.",
+            "pcm": "Explain say na one blue shirt you want if e enter your price limit; make assistant wait as you wan talk di limit.",
+            "en_pcm": "Explain say you want one blue shirt only if it fits your budget; ask am to wait for your price limit."
+          },
+          "slot_id": "F06_u1"
+        },
+        {
+          "role": "assistant",
+          "content": "The Blue T-shirt costs ₦10,000. I have not added it. Tell me when you would want me to add it."
+        },
+        {
+          "role": "user",
+          "brief": {
+            "en": "Set a strict price limit of ₦12,000: ask for one blue shirt to be added only if its price for one shirt is below that amount. Otherwise leave the cart unchanged. Make the condition clear in your own spoken wording.",
+            "pcm": "Set price limit of ₦12,000: make dem add one blue shirt only if one no reach that amount. If e no pass di condition, leave cart as e dey. Talk di condition as you go normally talk am.",
+            "en_pcm": "Give a strict ₦12,000 limit: add one blue shirt only if its unit price dey below that amount; otherwise leave the cart alone."
+          },
+          "slot_id": "F06_u2"
+        }
+      ],
+      "elicitation_notes": {
+        "en": "Use your own spoken wording. Keep the intended product, amount, timing and final decision. Hesitations and repairs are welcome when natural; do not read a polished script.",
+        "pcm": "Talk am as you dey talk normally. Keep di product, number, time and final decision. If you repeat word or correct yourself naturally, leave am; no force am.",
+        "en_pcm": "Use your normal speaking style. Keep di product, quantity, timing and final decision. You fit repeat or correct yourself naturally; no force extra fillers."
+      },
+      "language_versions": [
+        {
+          "language": "en",
+          "record_id": "F06_en"
+        },
+        {
+          "language": "pcm",
+          "record_id": "F06_pcm"
+        },
+        {
+          "language": "en_pcm",
+          "record_id": "F06_en_pcm"
+        }
+      ],
+      "status": "brief_only_not_evaluation_input"
+    },
+    {
+      "id": "F07",
+      "context_group": "FB04",
+      "pair_role": "A",
+      "title": "Blue… brown… I meant black!",
+      "family": "self_repair",
+      "setting": {
+        "en": "You are shopping here. Look at your basket and any earlier changes shown above. Read each card and say what you would say to Drake.",
+        "pcm": "You dey shop for here. Check wetin dey your basket and wetin don happen before. Read each card, talk wetin you go tell Drake.",
+        "en_pcm": "You dey shop here. Look at your basket and any earlier changes above. Read each card and tell Drake what you want, in your own words."
+      },
+      "initial_state": {
+        "cart": {},
+        "pending": null,
+        "receipts": []
+      },
+      "dialogue_slots": [
+        {
+          "role": "user",
+          "brief": {
+            "en": "Explain that you are picking a shirt for someone and may change your colour choice before finishing the request.",
+            "pcm": "Explain say you dey choose shirt for person and you fit change colour before you finish wetin you wan talk.",
+            "en_pcm": "Explain say you dey choose a shirt for someone and may change the colour before finishing your request."
+          },
+          "slot_id": "F07_u1"
+        },
+        {
+          "role": "assistant",
+          "content": "We are talking about the blue and black shirts. There is no brown shirt. Your basket is empty, and I have not added a shirt."
+        },
+        {
+          "role": "user",
+          "brief": {
+            "en": "Begin asking for one blue shirt; correct yourself to brown, realise brown is not sold, then correct yourself again and finish by asking for exactly one black shirt. The final choice must be clear; make the repairs conversational.",
+            "pcm": "Start say make dem add one blue shirt; change am to brown, remember say brown no dey, then correct yourself again finish say na just one black shirt make dem add. Make di final choice clear.",
+            "en_pcm": "Start with one blue shirt, correct yourself to brown, realise brown no dey, then finish by asking for exactly one black shirt. Make the self-corrections sound natural."
+          },
+          "slot_id": "F07_u2"
+        }
+      ],
+      "elicitation_notes": {
+        "en": "Use your own spoken wording. Keep the intended product, amount, timing and final decision. Hesitations and repairs are welcome when natural; do not read a polished script.",
+        "pcm": "Talk am as you dey talk normally. Keep di product, number, time and final decision. If you repeat word or correct yourself naturally, leave am; no force am.",
+        "en_pcm": "Use your normal speaking style. Keep di product, quantity, timing and final decision. You fit repeat or correct yourself naturally; no force extra fillers."
+      },
+      "language_versions": [
+        {
+          "language": "en",
+          "record_id": "F07_en"
+        },
+        {
+          "language": "pcm",
+          "record_id": "F07_pcm"
+        },
+        {
+          "language": "en_pcm",
+          "record_id": "F07_en_pcm"
+        }
+      ],
+      "status": "brief_only_not_evaluation_input"
+    },
+    {
+      "id": "F08",
+      "context_group": "FB04",
+      "pair_role": "B",
+      "title": "On second thought, leave it",
+      "family": "self_repair",
+      "setting": {
+        "en": "You are shopping here. Look at your basket and any earlier changes shown above. Read each card and say what you would say to Drake.",
+        "pcm": "You dey shop for here. Check wetin dey your basket and wetin don happen before. Read each card, talk wetin you go tell Drake.",
+        "en_pcm": "You dey shop here. Look at your basket and any earlier changes above. Read each card and tell Drake what you want, in your own words."
+      },
+      "initial_state": {
+        "cart": {},
+        "pending": null,
+        "receipts": []
+      },
+      "dialogue_slots": [
+        {
+          "role": "user",
+          "brief": {
+            "en": "Explain that you are picking a shirt for someone and may change your colour choice before finishing the request.",
+            "pcm": "Explain say you dey choose shirt for person and you fit change colour before you finish wetin you wan talk.",
+            "en_pcm": "Explain say you dey choose a shirt for someone and may change the colour before finishing your request."
+          },
+          "slot_id": "F08_u1"
+        },
+        {
+          "role": "assistant",
+          "content": "We are talking about the blue and black shirts. There is no brown shirt. Your basket is empty, and I have not added a shirt."
+        },
+        {
+          "role": "user",
+          "brief": {
+            "en": "Begin asking for one blue shirt; correct yourself to brown, realise brown is not sold, consider black, then cancel the whole addition because you have not settled on a colour. Finish with a clear instruction not to add anything yet.",
+            "pcm": "Start with one blue shirt, change am to brown, remember brown no dey, reason black, then cancel di whole addition because you never choose colour finish. End clearly say make dem never add anything.",
+            "en_pcm": "Start asking for one blue shirt, correct to brown, realise brown no dey, consider black, then cancel the whole addition. Finish clearly: you never decide, no addition yet."
+          },
+          "slot_id": "F08_u2"
+        }
+      ],
+      "elicitation_notes": {
+        "en": "Use your own spoken wording. Keep the intended product, amount, timing and final decision. Hesitations and repairs are welcome when natural; do not read a polished script.",
+        "pcm": "Talk am as you dey talk normally. Keep di product, number, time and final decision. If you repeat word or correct yourself naturally, leave am; no force am.",
+        "en_pcm": "Use your normal speaking style. Keep di product, quantity, timing and final decision. You fit repeat or correct yourself naturally; no force extra fillers."
+      },
+      "language_versions": [
+        {
+          "language": "en",
+          "record_id": "F08_en"
+        },
+        {
+          "language": "pcm",
+          "record_id": "F08_pcm"
+        },
+        {
+          "language": "en_pcm",
+          "record_id": "F08_en_pcm"
+        }
+      ],
+      "status": "brief_only_not_evaluation_input"
+    },
+    {
+      "id": "F09",
+      "context_group": "FB05",
+      "pair_role": "A",
+      "title": "One more, just one more",
+      "family": "repetition_scope",
+      "setting": {
+        "en": "You are shopping here. Look at your basket and any earlier changes shown above. Read each card and say what you would say to Drake.",
+        "pcm": "You dey shop for here. Check wetin dey your basket and wetin don happen before. Read each card, talk wetin you go tell Drake.",
+        "en_pcm": "You dey shop here. Look at your basket and any earlier changes above. Read each card and tell Drake what you want, in your own words."
+      },
+      "initial_state": {
+        "cart": {
+          "P1": 1
+        },
+        "pending": null,
+        "receipts": [
+          {
+            "request_id": "r1",
+            "status": "completed",
+            "product_id": "P1",
+            "quantity": 1,
+            "action": "add_to_cart"
+          }
+        ]
+      },
+      "dialogue_slots": [
+        {
+          "role": "user",
+          "brief": {
+            "en": "Say that you previously requested one blue shirt and want to keep track of how many are in your cart.",
+            "pcm": "Talk say you ask for one blue shirt before and you wan dey sure how many dey cart.",
+            "en_pcm": "Say you previously requested one blue shirt and want to know how many dey your cart."
+          },
+          "slot_id": "F09_u1"
+        },
+        {
+          "role": "assistant",
+          "content": "Your earlier request is done. Your basket has one blue shirt."
+        },
+        {
+          "role": "user",
+          "brief": {
+            "en": "Ask for one additional blue shirt. Naturally repeat or restart the number while making it clear you mean one extra shirt, bringing your cart to two in total—not a separate addition for each repetition.",
+            "pcm": "Ask make dem add one more blue shirt. Repeat or restart di number naturally, but make e clear say na one extra only, so cart go get two total; repetition no mean different addition.",
+            "en_pcm": "Ask for one more blue shirt, naturally repeat the quantity phrase, and make clear say na one extra unit, two in total—not extra units for each repeated word."
+          },
+          "slot_id": "F09_u2"
+        }
+      ],
+      "elicitation_notes": {
+        "en": "Use your own spoken wording. Keep the intended product, amount, timing and final decision. Hesitations and repairs are welcome when natural; do not read a polished script.",
+        "pcm": "Talk am as you dey talk normally. Keep di product, number, time and final decision. If you repeat word or correct yourself naturally, leave am; no force am.",
+        "en_pcm": "Use your normal speaking style. Keep di product, quantity, timing and final decision. You fit repeat or correct yourself naturally; no force extra fillers."
+      },
+      "language_versions": [
+        {
+          "language": "en",
+          "record_id": "F09_en"
+        },
+        {
+          "language": "pcm",
+          "record_id": "F09_pcm"
+        },
+        {
+          "language": "en_pcm",
+          "record_id": "F09_en_pcm"
+        }
+      ],
+      "status": "brief_only_not_evaluation_input"
+    },
+    {
+      "id": "F10",
+      "context_group": "FB05",
+      "pair_role": "B",
+      "title": "Did you already add it?",
+      "family": "repetition_scope",
+      "setting": {
+        "en": "You are shopping here. Look at your basket and any earlier changes shown above. Read each card and say what you would say to Drake.",
+        "pcm": "You dey shop for here. Check wetin dey your basket and wetin don happen before. Read each card, talk wetin you go tell Drake.",
+        "en_pcm": "You dey shop here. Look at your basket and any earlier changes above. Read each card and tell Drake what you want, in your own words."
+      },
+      "initial_state": {
+        "cart": {
+          "P1": 1
+        },
+        "pending": null,
+        "receipts": [
+          {
+            "request_id": "r1",
+            "status": "completed",
+            "product_id": "P1",
+            "quantity": 1,
+            "action": "add_to_cart"
+          }
+        ]
+      },
+      "dialogue_slots": [
+        {
+          "role": "user",
+          "brief": {
+            "en": "Say that you previously requested one blue shirt and want to keep track of how many are in your cart.",
+            "pcm": "Talk say you ask for one blue shirt before and you wan dey sure how many dey cart.",
+            "en_pcm": "Say you previously requested one blue shirt and want to know how many dey your cart."
+          },
+          "slot_id": "F10_u1"
+        },
+        {
+          "role": "assistant",
+          "content": "Your earlier request is done. Your basket has one blue shirt."
+        },
+        {
+          "role": "user",
+          "brief": {
+            "en": "Repeat the earlier request for one blue shirt as a reminder, then ask whether that earlier addition actually completed. Clarify that you are repeating your words to check, not asking for another shirt.",
+            "pcm": "Repeat wetin you talk before about one blue shirt as reminder, then ask if that earlier addition really complete. Make e clear say na check you dey check, no be another shirt you want.",
+            "en_pcm": "Repeat your earlier one-blue-shirt request as a reminder, then ask whether it completed. Explain say you dey check, not request another shirt."
+          },
+          "slot_id": "F10_u2"
+        }
+      ],
+      "elicitation_notes": {
+        "en": "Use your own spoken wording. Keep the intended product, amount, timing and final decision. Hesitations and repairs are welcome when natural; do not read a polished script.",
+        "pcm": "Talk am as you dey talk normally. Keep di product, number, time and final decision. If you repeat word or correct yourself naturally, leave am; no force am.",
+        "en_pcm": "Use your normal speaking style. Keep di product, quantity, timing and final decision. You fit repeat or correct yourself naturally; no force extra fillers."
+      },
+      "language_versions": [
+        {
+          "language": "en",
+          "record_id": "F10_en"
+        },
+        {
+          "language": "pcm",
+          "record_id": "F10_pcm"
+        },
+        {
+          "language": "en_pcm",
+          "record_id": "F10_en_pcm"
+        }
+      ],
+      "status": "brief_only_not_evaluation_input"
+    },
+    {
+      "id": "F11",
+      "context_group": "FB06",
+      "pair_role": "A",
+      "title": "Make it two altogether",
+      "family": "absolute_quantity",
+      "setting": {
+        "en": "You are shopping here. Look at your basket and any earlier changes shown above. Read each card and say what you would say to Drake.",
+        "pcm": "You dey shop for here. Check wetin dey your basket and wetin don happen before. Read each card, talk wetin you go tell Drake.",
+        "en_pcm": "You dey shop here. Look at your basket and any earlier changes above. Read each card and tell Drake what you want, in your own words."
+      },
+      "initial_state": {
+        "cart": {
+          "P1": 3
+        },
+        "pending": null,
+        "receipts": []
+      },
+      "dialogue_slots": [
+        {
+          "role": "user",
+          "brief": {
+            "en": "Say that the cart currently has three blue shirts and you are reconsidering the number because of your budget.",
+            "pcm": "Talk say three blue shirts dey cart now, you dey reason di number again because of your money.",
+            "en_pcm": "Say your cart has three blue shirts and you dey reconsider the quantity because of your budget."
+          },
+          "slot_id": "F11_u1"
+        },
+        {
+          "role": "assistant",
+          "content": "Your cart currently contains three Blue T-shirts at ₦10,000 each. Tell me whether you want a change or only information."
+        },
+        {
+          "role": "user",
+          "brief": {
+            "en": "Explain the three already in the cart are more than you need. Ask for the total number of blue shirts to become exactly two; emphasise total two, not two extra.",
+            "pcm": "Explain say di three wey dey cart too much. Ask make all di blue shirts for cart be exactly two; stress say total two, no be two extra.",
+            "en_pcm": "Explain say the three in your cart are too many. Change the total to exactly two blue shirts, not two extra."
+          },
+          "slot_id": "F11_u2"
+        }
+      ],
+      "elicitation_notes": {
+        "en": "Use your own spoken wording. Keep the intended product, amount, timing and final decision. Hesitations and repairs are welcome when natural; do not read a polished script.",
+        "pcm": "Talk am as you dey talk normally. Keep di product, number, time and final decision. If you repeat word or correct yourself naturally, leave am; no force am.",
+        "en_pcm": "Use your normal speaking style. Keep di product, quantity, timing and final decision. You fit repeat or correct yourself naturally; no force extra fillers."
+      },
+      "language_versions": [
+        {
+          "language": "en",
+          "record_id": "F11_en"
+        },
+        {
+          "language": "pcm",
+          "record_id": "F11_pcm"
+        },
+        {
+          "language": "en_pcm",
+          "record_id": "F11_en_pcm"
+        }
+      ],
+      "status": "brief_only_not_evaluation_input"
+    },
+    {
+      "id": "F12",
+      "context_group": "FB06",
+      "pair_role": "B",
+      "title": "Add two more",
+      "family": "increment_quantity",
+      "setting": {
+        "en": "You are shopping here. Look at your basket and any earlier changes shown above. Read each card and say what you would say to Drake.",
+        "pcm": "You dey shop for here. Check wetin dey your basket and wetin don happen before. Read each card, talk wetin you go tell Drake.",
+        "en_pcm": "You dey shop here. Look at your basket and any earlier changes above. Read each card and tell Drake what you want, in your own words."
+      },
+      "initial_state": {
+        "cart": {
+          "P1": 3
+        },
+        "pending": null,
+        "receipts": []
+      },
+      "dialogue_slots": [
+        {
+          "role": "user",
+          "brief": {
+            "en": "Say that the cart currently has three blue shirts and you are reconsidering the number because of your budget.",
+            "pcm": "Talk say three blue shirts dey cart now, you dey reason di number again because of your money.",
+            "en_pcm": "Say your cart has three blue shirts and you dey reconsider the quantity because of your budget."
+          },
+          "slot_id": "F12_u1"
+        },
+        {
+          "role": "assistant",
+          "content": "Your cart currently contains three Blue T-shirts at ₦10,000 each. Tell me whether you want a change or only information."
+        },
+        {
+          "role": "user",
+          "brief": {
+            "en": "Explain that you have now decided you need more shirts. Ask for two additional blue shirts beyond the three already in your cart; make clear the final total should be five.",
+            "pcm": "Explain say you don decide you need more shirts. Make dem add two extra blue shirts join di three for cart; make e clear say total go be five.",
+            "en_pcm": "Explain say you now need more shirts. Add two extra blue shirts to the three already there, making five total."
+          },
+          "slot_id": "F12_u2"
+        }
+      ],
+      "elicitation_notes": {
+        "en": "Use your own spoken wording. Keep the intended product, amount, timing and final decision. Hesitations and repairs are welcome when natural; do not read a polished script.",
+        "pcm": "Talk am as you dey talk normally. Keep di product, number, time and final decision. If you repeat word or correct yourself naturally, leave am; no force am.",
+        "en_pcm": "Use your normal speaking style. Keep di product, quantity, timing and final decision. You fit repeat or correct yourself naturally; no force extra fillers."
+      },
+      "language_versions": [
+        {
+          "language": "en",
+          "record_id": "F12_en"
+        },
+        {
+          "language": "pcm",
+          "record_id": "F12_pcm"
+        },
+        {
+          "language": "en_pcm",
+          "record_id": "F12_en_pcm"
+        }
+      ],
+      "status": "brief_only_not_evaluation_input"
+    },
+    {
+      "id": "F13",
+      "context_group": "FB07",
+      "pair_role": "A",
+      "title": "What would two shirts cost?",
+      "family": "price_vs_quantity",
+      "setting": {
+        "en": "You are shopping here. Look at your basket and any earlier changes shown above. Read each card and say what you would say to Drake.",
+        "pcm": "You dey shop for here. Check wetin dey your basket and wetin don happen before. Read each card, talk wetin you go tell Drake.",
+        "en_pcm": "You dey shop here. Look at your basket and any earlier changes above. Read each card and tell Drake what you want, in your own words."
+      },
+      "initial_state": {
+        "cart": {
+          "P1": 3
+        },
+        "pending": null,
+        "receipts": []
+      },
+      "dialogue_slots": [
+        {
+          "role": "user",
+          "brief": {
+            "en": "Say that the cart currently has three blue shirts and you are reconsidering the number because of your budget.",
+            "pcm": "Talk say three blue shirts dey cart now, you dey reason di number again because of your money.",
+            "en_pcm": "Say your cart has three blue shirts and you dey reconsider the quantity because of your budget."
+          },
+          "slot_id": "F13_u1"
+        },
+        {
+          "role": "assistant",
+          "content": "Your cart currently contains three Blue T-shirts at ₦10,000 each. Tell me whether you want a change or only information."
+        },
+        {
+          "role": "user",
+          "brief": {
+            "en": "Think aloud about buying only two blue shirts and ask what those two would cost. Explicitly keep all three currently in your cart unchanged while you compare the price.",
+            "pcm": "Reason aloud say you fit buy just two blue shirts, ask how much di two go cost. Talk clearly say make di three wey dey cart remain as dem dey while you compare price.",
+            "en_pcm": "Think aloud about buying two blue shirts and ask their total price, but leave the three currently in your cart untouched while you compare."
+          },
+          "slot_id": "F13_u2"
+        }
+      ],
+      "elicitation_notes": {
+        "en": "Use your own spoken wording. Keep the intended product, amount, timing and final decision. Hesitations and repairs are welcome when natural; do not read a polished script.",
+        "pcm": "Talk am as you dey talk normally. Keep di product, number, time and final decision. If you repeat word or correct yourself naturally, leave am; no force am.",
+        "en_pcm": "Use your normal speaking style. Keep di product, quantity, timing and final decision. You fit repeat or correct yourself naturally; no force extra fillers."
+      },
+      "language_versions": [
+        {
+          "language": "en",
+          "record_id": "F13_en"
+        },
+        {
+          "language": "pcm",
+          "record_id": "F13_pcm"
+        },
+        {
+          "language": "en_pcm",
+          "record_id": "F13_en_pcm"
+        }
+      ],
+      "status": "brief_only_not_evaluation_input"
+    },
+    {
+      "id": "F14",
+      "context_group": "FB07",
+      "pair_role": "B",
+      "title": "I only need two now",
+      "family": "price_vs_quantity",
+      "setting": {
+        "en": "You are shopping here. Look at your basket and any earlier changes shown above. Read each card and say what you would say to Drake.",
+        "pcm": "You dey shop for here. Check wetin dey your basket and wetin don happen before. Read each card, talk wetin you go tell Drake.",
+        "en_pcm": "You dey shop here. Look at your basket and any earlier changes above. Read each card and tell Drake what you want, in your own words."
+      },
+      "initial_state": {
+        "cart": {
+          "P1": 3
+        },
+        "pending": null,
+        "receipts": []
+      },
+      "dialogue_slots": [
+        {
+          "role": "user",
+          "brief": {
+            "en": "Say that the cart currently has three blue shirts and you are reconsidering the number because of your budget.",
+            "pcm": "Talk say three blue shirts dey cart now, you dey reason di number again because of your money.",
+            "en_pcm": "Say your cart has three blue shirts and you dey reconsider the quantity because of your budget."
+          },
+          "slot_id": "F14_u1"
+        },
+        {
+          "role": "assistant",
+          "content": "Your cart currently contains three Blue T-shirts at ₦10,000 each. Tell me whether you want a change or only information."
+        },
+        {
+          "role": "user",
+          "brief": {
+            "en": "Recall that two blue shirts cost ₦20,000, say the comparison is finished, and now clearly ask to reduce your cart from three blue shirts to two in total.",
+            "pcm": "Remember say two blue shirts na ₦20,000, talk say you don compare finish; now ask make dem reduce di three blue shirts for cart to two total.",
+            "en_pcm": "Recall the ₦20,000 price for two, say you don finish comparing, and now reduce your cart from three blue shirts to two total."
+          },
+          "slot_id": "F14_u2"
+        }
+      ],
+      "elicitation_notes": {
+        "en": "Use your own spoken wording. Keep the intended product, amount, timing and final decision. Hesitations and repairs are welcome when natural; do not read a polished script.",
+        "pcm": "Talk am as you dey talk normally. Keep di product, number, time and final decision. If you repeat word or correct yourself naturally, leave am; no force am.",
+        "en_pcm": "Use your normal speaking style. Keep di product, quantity, timing and final decision. You fit repeat or correct yourself naturally; no force extra fillers."
+      },
+      "language_versions": [
+        {
+          "language": "en",
+          "record_id": "F14_en"
+        },
+        {
+          "language": "pcm",
+          "record_id": "F14_pcm"
+        },
+        {
+          "language": "en_pcm",
+          "record_id": "F14_en_pcm"
+        }
+      ],
+      "status": "brief_only_not_evaluation_input"
+    },
+    {
+      "id": "F15",
+      "context_group": "FB08",
+      "pair_role": "A",
+      "title": "Yes, add those two shirts",
+      "family": "pending_confirmation",
+      "setting": {
+        "en": "You are shopping here. Look at your basket and any earlier changes shown above. Read each card and say what you would say to Drake.",
+        "pcm": "You dey shop for here. Check wetin dey your basket and wetin don happen before. Read each card, talk wetin you go tell Drake.",
+        "en_pcm": "You dey shop here. Look at your basket and any earlier changes above. Read each card and tell Drake what you want, in your own words."
+      },
+      "initial_state": {
+        "cart": {},
+        "pending": {
+          "action": "add_to_cart",
+          "product_id": "P1",
+          "quantity": 2,
+          "request_id": "r1",
+          "status": "pending"
+        },
+        "receipts": []
+      },
+      "dialogue_slots": [
+        {
+          "role": "user",
+          "brief": {
+            "en": "Explain that you are considering two blue shirts, and ask the assistant to check with you before putting them in your cart.",
+            "pcm": "Explain say you dey reason two blue shirts; make assistant ask you first before e put dem for cart.",
+            "en_pcm": "Explain say you dey consider two blue shirts and want confirmation before any addition."
+          },
+          "slot_id": "F15_u1"
+        },
+        {
+          "role": "assistant",
+          "content": "Should I put two Blue T-shirts in your basket? I have not added them yet."
+        },
+        {
+          "role": "user",
+          "brief": {
+            "en": "Briefly revisit your hesitation, then give a clear affirmative reply approving the pending two-blue-shirt addition now. Keep the number and colour unchanged.",
+            "pcm": "Mention small how you hesitate before, then answer clearly make dem go ahead now with di pending two blue shirts. No change number or colour.",
+            "en_pcm": "Refer briefly to your hesitation, then clearly approve the pending two-blue-shirt addition now, same number and colour."
+          },
+          "slot_id": "F15_u2"
+        }
+      ],
+      "elicitation_notes": {
+        "en": "Use your own spoken wording. Keep the intended product, amount, timing and final decision. Hesitations and repairs are welcome when natural; do not read a polished script.",
+        "pcm": "Talk am as you dey talk normally. Keep di product, number, time and final decision. If you repeat word or correct yourself naturally, leave am; no force am.",
+        "en_pcm": "Use your normal speaking style. Keep di product, quantity, timing and final decision. You fit repeat or correct yourself naturally; no force extra fillers."
+      },
+      "language_versions": [
+        {
+          "language": "en",
+          "record_id": "F15_en"
+        },
+        {
+          "language": "pcm",
+          "record_id": "F15_pcm"
+        },
+        {
+          "language": "en_pcm",
+          "record_id": "F15_en_pcm"
+        }
+      ],
+      "status": "brief_only_not_evaluation_input"
+    },
+    {
+      "id": "F16",
+      "context_group": "FB08",
+      "pair_role": "B",
+      "title": "No, do not add those shirts",
+      "family": "pending_confirmation",
+      "setting": {
+        "en": "You are shopping here. Look at your basket and any earlier changes shown above. Read each card and say what you would say to Drake.",
+        "pcm": "You dey shop for here. Check wetin dey your basket and wetin don happen before. Read each card, talk wetin you go tell Drake.",
+        "en_pcm": "You dey shop here. Look at your basket and any earlier changes above. Read each card and tell Drake what you want, in your own words."
+      },
+      "initial_state": {
+        "cart": {},
+        "pending": {
+          "action": "add_to_cart",
+          "product_id": "P1",
+          "quantity": 2,
+          "request_id": "r1",
+          "status": "pending"
+        },
+        "receipts": []
+      },
+      "dialogue_slots": [
+        {
+          "role": "user",
+          "brief": {
+            "en": "Explain that you are considering two blue shirts, and ask the assistant to check with you before putting them in your cart.",
+            "pcm": "Explain say you dey reason two blue shirts; make assistant ask you first before e put dem for cart.",
+            "en_pcm": "Explain say you dey consider two blue shirts and want confirmation before any addition."
+          },
+          "slot_id": "F16_u1"
+        },
+        {
+          "role": "assistant",
+          "content": "Should I put two Blue T-shirts in your basket? I have not added them yet."
+        },
+        {
+          "role": "user",
+          "brief": {
+            "en": "Start replying to the assistant, then make a clear negative decision: cancel the pending two-blue-shirt addition and keep the cart empty. Your final decision must outweigh any conversational hesitation.",
+            "pcm": "Start to answer assistant, then give clear no: cancel di pending two blue shirts and leave cart empty. Make di final no clear even if you hesitate first.",
+            "en_pcm": "Begin your reply, then clearly say no: cancel the pending two-blue-shirt addition and leave the cart empty."
+          },
+          "slot_id": "F16_u2"
+        }
+      ],
+      "elicitation_notes": {
+        "en": "Use your own spoken wording. Keep the intended product, amount, timing and final decision. Hesitations and repairs are welcome when natural; do not read a polished script.",
+        "pcm": "Talk am as you dey talk normally. Keep di product, number, time and final decision. If you repeat word or correct yourself naturally, leave am; no force am.",
+        "en_pcm": "Use your normal speaking style. Keep di product, quantity, timing and final decision. You fit repeat or correct yourself naturally; no force extra fillers."
+      },
+      "language_versions": [
+        {
+          "language": "en",
+          "record_id": "F16_en"
+        },
+        {
+          "language": "pcm",
+          "record_id": "F16_pcm"
+        },
+        {
+          "language": "en_pcm",
+          "record_id": "F16_en_pcm"
+        }
+      ],
+      "status": "brief_only_not_evaluation_input"
+    },
+    {
+      "id": "F17",
+      "context_group": "FB09",
+      "pair_role": "A",
+      "title": "Leave the blue; keep the black",
+      "family": "partial_revocation",
+      "setting": {
+        "en": "You are shopping here. Look at your basket and any earlier changes shown above. Read each card and say what you would say to Drake.",
+        "pcm": "You dey shop for here. Check wetin dey your basket and wetin don happen before. Read each card, talk wetin you go tell Drake.",
+        "en_pcm": "You dey shop here. Look at your basket and any earlier changes above. Read each card and tell Drake what you want, in your own words."
+      },
+      "initial_state": {
+        "cart": {},
+        "pending": {
+          "request_id": "r1",
+          "status": "pending",
+          "actions": [
+            {
+              "action": "add_to_cart",
+              "product_id": "P1",
+              "quantity": 1
+            },
+            {
+              "action": "add_to_cart",
+              "product_id": "P2",
+              "quantity": 1
+            }
+          ]
+        },
+        "receipts": []
+      },
+      "dialogue_slots": [
+        {
+          "role": "user",
+          "brief": {
+            "en": "Ask for one blue shirt and one black shirt, but say you may revise the order before it is executed.",
+            "pcm": "Ask for one blue shirt and one black shirt, but talk say you fit still change di order before dem run am.",
+            "en_pcm": "Ask for one blue and one black shirt, but say you may still revise the order before execution."
+          },
+          "slot_id": "F17_u1"
+        },
+        {
+          "role": "assistant",
+          "content": "Neither shirt has been added yet. Your basket is empty. Tell me which one you want before I do anything."
+        },
+        {
+          "role": "user",
+          "brief": {
+            "en": "Reconsider the two-shirt order. Cancel only the blue shirt and ask the assistant to go ahead with only one black shirt now. Make clear that this is a revision of the pending order, not a second order.",
+            "pcm": "Reason di two-shirt order again. Cancel only di blue shirt, make dem run just one black shirt now. Make e clear say na di pending order you dey change, no be another order.",
+            "en_pcm": "Reconsider the two-shirt order: cancel only blue, then go ahead with one black shirt now. Na revision of the pending order, not a new duplicate order."
+          },
+          "slot_id": "F17_u2"
+        }
+      ],
+      "elicitation_notes": {
+        "en": "Use your own spoken wording. Keep the intended product, amount, timing and final decision. Hesitations and repairs are welcome when natural; do not read a polished script.",
+        "pcm": "Talk am as you dey talk normally. Keep di product, number, time and final decision. If you repeat word or correct yourself naturally, leave am; no force am.",
+        "en_pcm": "Use your normal speaking style. Keep di product, quantity, timing and final decision. You fit repeat or correct yourself naturally; no force extra fillers."
+      },
+      "language_versions": [
+        {
+          "language": "en",
+          "record_id": "F17_en"
+        },
+        {
+          "language": "pcm",
+          "record_id": "F17_pcm"
+        },
+        {
+          "language": "en_pcm",
+          "record_id": "F17_en_pcm"
+        }
+      ],
+      "status": "brief_only_not_evaluation_input"
+    },
+    {
+      "id": "F18",
+      "context_group": "FB09",
+      "pair_role": "B",
+      "title": "Leave the black; keep the blue",
+      "family": "partial_revocation",
+      "setting": {
+        "en": "You are shopping here. Look at your basket and any earlier changes shown above. Read each card and say what you would say to Drake.",
+        "pcm": "You dey shop for here. Check wetin dey your basket and wetin don happen before. Read each card, talk wetin you go tell Drake.",
+        "en_pcm": "You dey shop here. Look at your basket and any earlier changes above. Read each card and tell Drake what you want, in your own words."
+      },
+      "initial_state": {
+        "cart": {},
+        "pending": {
+          "request_id": "r1",
+          "status": "pending",
+          "actions": [
+            {
+              "action": "add_to_cart",
+              "product_id": "P1",
+              "quantity": 1
+            },
+            {
+              "action": "add_to_cart",
+              "product_id": "P2",
+              "quantity": 1
+            }
+          ]
+        },
+        "receipts": []
+      },
+      "dialogue_slots": [
+        {
+          "role": "user",
+          "brief": {
+            "en": "Ask for one blue shirt and one black shirt, but say you may revise the order before it is executed.",
+            "pcm": "Ask for one blue shirt and one black shirt, but talk say you fit still change di order before dem run am.",
+            "en_pcm": "Ask for one blue and one black shirt, but say you may still revise the order before execution."
+          },
+          "slot_id": "F18_u1"
+        },
+        {
+          "role": "assistant",
+          "content": "Neither shirt has been added yet. Your basket is empty. Tell me which one you want before I do anything."
+        },
+        {
+          "role": "user",
+          "brief": {
+            "en": "Reconsider the two-shirt order. Cancel only the black shirt and ask the assistant to go ahead with only one blue shirt now. Make clear that this is a revision of the pending order, not a second order.",
+            "pcm": "Reason di two-shirt order again. Cancel only di black shirt, make dem run just one blue shirt now. Make e clear say na di pending order you dey change, no be another order.",
+            "en_pcm": "Reconsider the two-shirt order: cancel only black, then go ahead with one blue shirt now. Na revision of the pending order, not a new duplicate order."
+          },
+          "slot_id": "F18_u2"
+        }
+      ],
+      "elicitation_notes": {
+        "en": "Use your own spoken wording. Keep the intended product, amount, timing and final decision. Hesitations and repairs are welcome when natural; do not read a polished script.",
+        "pcm": "Talk am as you dey talk normally. Keep di product, number, time and final decision. If you repeat word or correct yourself naturally, leave am; no force am.",
+        "en_pcm": "Use your normal speaking style. Keep di product, quantity, timing and final decision. You fit repeat or correct yourself naturally; no force extra fillers."
+      },
+      "language_versions": [
+        {
+          "language": "en",
+          "record_id": "F18_en"
+        },
+        {
+          "language": "pcm",
+          "record_id": "F18_pcm"
+        },
+        {
+          "language": "en_pcm",
+          "record_id": "F18_en_pcm"
+        }
+      ],
+      "status": "brief_only_not_evaluation_input"
+    },
+    {
+      "id": "F19",
+      "context_group": "FB10",
+      "pair_role": "A",
+      "title": "Two of this one… which one?",
+      "family": "product_ambiguity",
+      "setting": {
+        "en": "You are shopping here. Look at your basket and any earlier changes shown above. Read each card and say what you would say to Drake.",
+        "pcm": "You dey shop for here. Check wetin dey your basket and wetin don happen before. Read each card, talk wetin you go tell Drake.",
+        "en_pcm": "You dey shop here. Look at your basket and any earlier changes above. Read each card and tell Drake what you want, in your own words."
+      },
+      "initial_state": {
+        "cart": {},
+        "pending": null,
+        "receipts": []
+      },
+      "dialogue_slots": [
+        {
+          "role": "user",
+          "brief": {
+            "en": "Say you are comparing the two shirts but have not selected either one. Do not identify a colour or point to an item in your earlier turn.",
+            "pcm": "Talk say you dey compare di two shirts but you never choose any. No name colour or point one for di first turn.",
+            "en_pcm": "Say you dey compare both shirts but have not selected either; do not name a colour in the earlier turn."
+          },
+          "slot_id": "F19_u1"
+        },
+        {
+          "role": "assistant",
+          "content": "There is a Blue T-shirt and a Black T-shirt. Neither has been selected. I cannot see where you point or look."
+        },
+        {
+          "role": "user",
+          "brief": {
+            "en": "Ask for two of 'this shirt' or 'this one' to be added, speaking naturally with a repetition if useful. Do not name a colour, price or any other clue that selects either item. You intend an addition but have not supplied its identity.",
+            "pcm": "Ask make dem add two of 'this one' or 'this shirt', as you dey talk normally. No name colour, price or clue wey go select any one. You want addition but you never identify di shirt.",
+            "en_pcm": "Ask to add two of 'this one', with natural repetition if useful. No colour, price or clue that identifies either shirt; your intended addition has an unresolved product."
+          },
+          "slot_id": "F19_u2"
+        }
+      ],
+      "elicitation_notes": {
+        "en": "Use your own spoken wording. Keep the intended product, amount, timing and final decision. Hesitations and repairs are welcome when natural; do not read a polished script.",
+        "pcm": "Talk am as you dey talk normally. Keep di product, number, time and final decision. If you repeat word or correct yourself naturally, leave am; no force am.",
+        "en_pcm": "Use your normal speaking style. Keep di product, quantity, timing and final decision. You fit repeat or correct yourself naturally; no force extra fillers."
+      },
+      "language_versions": [
+        {
+          "language": "en",
+          "record_id": "F19_en"
+        },
+        {
+          "language": "pcm",
+          "record_id": "F19_pcm"
+        },
+        {
+          "language": "en_pcm",
+          "record_id": "F19_en_pcm"
+        }
+      ],
+      "status": "brief_only_not_evaluation_input"
+    },
+    {
+      "id": "F20",
+      "context_group": "FB10",
+      "pair_role": "B",
+      "title": "I mean the black shirt",
+      "family": "product_ambiguity",
+      "setting": {
+        "en": "You are shopping here. Look at your basket and any earlier changes shown above. Read each card and say what you would say to Drake.",
+        "pcm": "You dey shop for here. Check wetin dey your basket and wetin don happen before. Read each card, talk wetin you go tell Drake.",
+        "en_pcm": "You dey shop here. Look at your basket and any earlier changes above. Read each card and tell Drake what you want, in your own words."
+      },
+      "initial_state": {
+        "cart": {},
+        "pending": null,
+        "receipts": []
+      },
+      "dialogue_slots": [
+        {
+          "role": "user",
+          "brief": {
+            "en": "Say you are comparing the two shirts but have not selected either one. Do not identify a colour or point to an item in your earlier turn.",
+            "pcm": "Talk say you dey compare di two shirts but you never choose any. No name colour or point one for di first turn.",
+            "en_pcm": "Say you dey compare both shirts but have not selected either; do not name a colour in the earlier turn."
+          },
+          "slot_id": "F20_u1"
+        },
+        {
+          "role": "assistant",
+          "content": "There is a Blue T-shirt and a Black T-shirt. Neither has been selected. I cannot see where you point or look."
+        },
+        {
+          "role": "user",
+          "brief": {
+            "en": "Begin asking to add two of 'this one', then realise that is unclear and repair your request by naming the black shirt. Finish by asking for exactly two black shirts now.",
+            "pcm": "Start say make dem add two of 'this one', then remember say e no clear; correct am name black shirt. End say na exactly two black shirts make dem add now.",
+            "en_pcm": "Start with 'two of this one', then correct the unclear reference by naming the black shirt. Finish asking for exactly two black shirts now."
+          },
+          "slot_id": "F20_u2"
+        }
+      ],
+      "elicitation_notes": {
+        "en": "Use your own spoken wording. Keep the intended product, amount, timing and final decision. Hesitations and repairs are welcome when natural; do not read a polished script.",
+        "pcm": "Talk am as you dey talk normally. Keep di product, number, time and final decision. If you repeat word or correct yourself naturally, leave am; no force am.",
+        "en_pcm": "Use your normal speaking style. Keep di product, quantity, timing and final decision. You fit repeat or correct yourself naturally; no force extra fillers."
+      },
+      "language_versions": [
+        {
+          "language": "en",
+          "record_id": "F20_en"
+        },
+        {
+          "language": "pcm",
+          "record_id": "F20_pcm"
+        },
+        {
+          "language": "en_pcm",
+          "record_id": "F20_en_pcm"
+        }
+      ],
+      "status": "brief_only_not_evaluation_input"
+    },
+    {
+      "id": "F21",
+      "context_group": "FB11",
+      "pair_role": "A",
+      "title": "Two… sorry, just one",
+      "family": "quantity_repair",
+      "setting": {
+        "en": "You are shopping here. Look at your basket and any earlier changes shown above. Read each card and say what you would say to Drake.",
+        "pcm": "You dey shop for here. Check wetin dey your basket and wetin don happen before. Read each card, talk wetin you go tell Drake.",
+        "en_pcm": "You dey shop here. Look at your basket and any earlier changes above. Read each card and tell Drake what you want, in your own words."
+      },
+      "initial_state": {
+        "cart": {},
+        "pending": null,
+        "receipts": []
+      },
+      "dialogue_slots": [
+        {
+          "role": "user",
+          "brief": {
+            "en": "Explain you are buying blue shirts for a small group but are still counting how many are needed.",
+            "pcm": "Explain say you dey buy blue shirts for small group, but you still dey count how many una need.",
+            "en_pcm": "Explain say you dey buy blue shirts for a small group and are still counting the quantity."
+          },
+          "slot_id": "F21_u1"
+        },
+        {
+          "role": "assistant",
+          "content": "Each Blue T-shirt costs ₦10,000. Your cart is empty. How many would you like?"
+        },
+        {
+          "role": "user",
+          "brief": {
+            "en": "Start to request two blue shirts, correct yourself because one person no longer needs one, then finish by asking to add one blue shirt only. Repeat 'one' naturally without changing the amount.",
+            "pcm": "Start ask for two blue shirts, correct yourself because one person no need again, then finish say make dem add just one blue shirt. You fit repeat 'one' naturally but no change di amount.",
+            "en_pcm": "Start requesting two blue shirts, correct yourself because one person no need again, and finish with one blue shirt only. You can repeat 'one' naturally."
+          },
+          "slot_id": "F21_u2"
+        }
+      ],
+      "elicitation_notes": {
+        "en": "Use your own spoken wording. Keep the intended product, amount, timing and final decision. Hesitations and repairs are welcome when natural; do not read a polished script.",
+        "pcm": "Talk am as you dey talk normally. Keep di product, number, time and final decision. If you repeat word or correct yourself naturally, leave am; no force am.",
+        "en_pcm": "Use your normal speaking style. Keep di product, quantity, timing and final decision. You fit repeat or correct yourself naturally; no force extra fillers."
+      },
+      "language_versions": [
+        {
+          "language": "en",
+          "record_id": "F21_en"
+        },
+        {
+          "language": "pcm",
+          "record_id": "F21_pcm"
+        },
+        {
+          "language": "en_pcm",
+          "record_id": "F21_en_pcm"
+        }
+      ],
+      "status": "brief_only_not_evaluation_input"
+    },
+    {
+      "id": "F22",
+      "context_group": "FB11",
+      "pair_role": "B",
+      "title": "One… actually, make it two",
+      "family": "quantity_repair",
+      "setting": {
+        "en": "You are shopping here. Look at your basket and any earlier changes shown above. Read each card and say what you would say to Drake.",
+        "pcm": "You dey shop for here. Check wetin dey your basket and wetin don happen before. Read each card, talk wetin you go tell Drake.",
+        "en_pcm": "You dey shop here. Look at your basket and any earlier changes above. Read each card and tell Drake what you want, in your own words."
+      },
+      "initial_state": {
+        "cart": {},
+        "pending": null,
+        "receipts": []
+      },
+      "dialogue_slots": [
+        {
+          "role": "user",
+          "brief": {
+            "en": "Explain you are buying blue shirts for a small group but are still counting how many are needed.",
+            "pcm": "Explain say you dey buy blue shirts for small group, but you still dey count how many una need.",
+            "en_pcm": "Explain say you dey buy blue shirts for a small group and are still counting the quantity."
+          },
+          "slot_id": "F22_u1"
+        },
+        {
+          "role": "assistant",
+          "content": "Each Blue T-shirt costs ₦10,000. Your cart is empty. How many would you like?"
+        },
+        {
+          "role": "user",
+          "brief": {
+            "en": "Start to request one blue shirt, remember a second person also needs one, correct yourself and finish by asking to add two blue shirts in total. Do not request three or two separate orders.",
+            "pcm": "Start ask for one blue shirt, remember say another person need one too, correct yourself finish say make dem add two blue shirts total. No be three, no be two separate orders.",
+            "en_pcm": "Start with one blue shirt, remember a second person needs one too, then correct yourself to two blue shirts total—not three or separate duplicate orders."
+          },
+          "slot_id": "F22_u2"
+        }
+      ],
+      "elicitation_notes": {
+        "en": "Use your own spoken wording. Keep the intended product, amount, timing and final decision. Hesitations and repairs are welcome when natural; do not read a polished script.",
+        "pcm": "Talk am as you dey talk normally. Keep di product, number, time and final decision. If you repeat word or correct yourself naturally, leave am; no force am.",
+        "en_pcm": "Use your normal speaking style. Keep di product, quantity, timing and final decision. You fit repeat or correct yourself naturally; no force extra fillers."
+      },
+      "language_versions": [
+        {
+          "language": "en",
+          "record_id": "F22_en"
+        },
+        {
+          "language": "pcm",
+          "record_id": "F22_pcm"
+        },
+        {
+          "language": "en_pcm",
+          "record_id": "F22_en_pcm"
+        }
+      ],
+      "status": "brief_only_not_evaluation_input"
+    },
+    {
+      "id": "F23",
+      "context_group": "FB12",
+      "pair_role": "A",
+      "title": "Cancel that, please",
+      "family": "revocation_timing",
+      "setting": {
+        "en": "You are shopping here. Look at your basket and any earlier changes shown above. Read each card and say what you would say to Drake.",
+        "pcm": "You dey shop for here. Check wetin dey your basket and wetin don happen before. Read each card, talk wetin you go tell Drake.",
+        "en_pcm": "You dey shop here. Look at your basket and any earlier changes above. Read each card and tell Drake what you want, in your own words."
+      },
+      "initial_state": {
+        "cart": {},
+        "pending": {
+          "action": "add_to_cart",
+          "product_id": "P1",
+          "quantity": 1,
+          "request_id": "r1",
+          "status": "pending"
+        },
+        "receipts": []
+      },
+      "dialogue_slots": [
+        {
+          "role": "user",
+          "brief": {
+            "en": "Ask to add one blue shirt, then explain you may need to stop the request before it executes.",
+            "pcm": "Ask make dem add one blue shirt, then talk say you fit need stop di request before e run.",
+            "en_pcm": "Ask for one blue shirt, then explain say you may need to stop the request before execution."
+          },
+          "slot_id": "F23_u1"
+        },
+        {
+          "role": "assistant",
+          "content": "I have not added the blue shirt yet. Your basket has not changed."
+        },
+        {
+          "role": "user",
+          "brief": {
+            "en": "Interrupt your earlier request, explain you changed your mind, and cancel that pending addition entirely. It must not be carried out even if you previously asked for it.",
+            "pcm": "Interrupt di earlier request, explain say you don change mind, cancel di pending addition finish. Make dem no run am even though na you ask before.",
+            "en_pcm": "Interrupt your earlier request, say you don change your mind, and cancel that pending addition completely."
+          },
+          "slot_id": "F23_u2"
+        }
+      ],
+      "elicitation_notes": {
+        "en": "Use your own spoken wording. Keep the intended product, amount, timing and final decision. Hesitations and repairs are welcome when natural; do not read a polished script.",
+        "pcm": "Talk am as you dey talk normally. Keep di product, number, time and final decision. If you repeat word or correct yourself naturally, leave am; no force am.",
+        "en_pcm": "Use your normal speaking style. Keep di product, quantity, timing and final decision. You fit repeat or correct yourself naturally; no force extra fillers."
+      },
+      "language_versions": [
+        {
+          "language": "en",
+          "record_id": "F23_en"
+        },
+        {
+          "language": "pcm",
+          "record_id": "F23_pcm"
+        },
+        {
+          "language": "en_pcm",
+          "record_id": "F23_en_pcm"
+        }
+      ],
+      "status": "brief_only_not_evaluation_input"
+    },
+    {
+      "id": "F24",
+      "context_group": "FB12",
+      "pair_role": "B",
+      "title": "Hold on, not yet",
+      "family": "revocation_timing",
+      "setting": {
+        "en": "You are shopping here. Look at your basket and any earlier changes shown above. Read each card and say what you would say to Drake.",
+        "pcm": "You dey shop for here. Check wetin dey your basket and wetin don happen before. Read each card, talk wetin you go tell Drake.",
+        "en_pcm": "You dey shop here. Look at your basket and any earlier changes above. Read each card and tell Drake what you want, in your own words."
+      },
+      "initial_state": {
+        "cart": {},
+        "pending": {
+          "action": "add_to_cart",
+          "product_id": "P1",
+          "quantity": 1,
+          "request_id": "r1",
+          "status": "pending"
+        },
+        "receipts": []
+      },
+      "dialogue_slots": [
+        {
+          "role": "user",
+          "brief": {
+            "en": "Ask to add one blue shirt, then explain you may need to stop the request before it executes.",
+            "pcm": "Ask make dem add one blue shirt, then talk say you fit need stop di request before e run.",
+            "en_pcm": "Ask for one blue shirt, then explain say you may need to stop the request before execution."
+          },
+          "slot_id": "F24_u1"
+        },
+        {
+          "role": "assistant",
+          "content": "I have not added the blue shirt yet. Your basket has not changed."
+        },
+        {
+          "role": "user",
+          "brief": {
+            "en": "Interrupt your earlier request and ask the assistant to wait because you need to check something. You may still want the same blue shirt later, but make clear it must not be added until you give a fresh go-ahead.",
+            "pcm": "Interrupt di earlier request make assistant wait because you wan check something. You fit still want di blue shirt later, but make dem no add am till you give fresh go-ahead.",
+            "en_pcm": "Interrupt and ask am to wait while you check something. You might still want the same blue shirt later, but no addition until you give a fresh go-ahead."
+          },
+          "slot_id": "F24_u2"
+        }
+      ],
+      "elicitation_notes": {
+        "en": "Use your own spoken wording. Keep the intended product, amount, timing and final decision. Hesitations and repairs are welcome when natural; do not read a polished script.",
+        "pcm": "Talk am as you dey talk normally. Keep di product, number, time and final decision. If you repeat word or correct yourself naturally, leave am; no force am.",
+        "en_pcm": "Use your normal speaking style. Keep di product, quantity, timing and final decision. You fit repeat or correct yourself naturally; no force extra fillers."
+      },
+      "language_versions": [
+        {
+          "language": "en",
+          "record_id": "F24_en"
+        },
+        {
+          "language": "pcm",
+          "record_id": "F24_pcm"
+        },
+        {
+          "language": "en_pcm",
+          "record_id": "F24_en_pcm"
+        }
+      ],
+      "status": "brief_only_not_evaluation_input"
+    },
+    {
+      "id": "F25",
+      "context_group": "FB13",
+      "pair_role": "A",
+      "title": "Yes, that is the shirt I mean",
+      "family": "affirmative_scope",
+      "setting": {
+        "en": "You are shopping here. Look at your basket and any earlier changes shown above. Read each card and say what you would say to Drake.",
+        "pcm": "You dey shop for here. Check wetin dey your basket and wetin don happen before. Read each card, talk wetin you go tell Drake.",
+        "en_pcm": "You dey shop here. Look at your basket and any earlier changes above. Read each card and tell Drake what you want, in your own words."
+      },
+      "initial_state": {
+        "cart": {},
+        "pending": null,
+        "receipts": []
+      },
+      "dialogue_slots": [
+        {
+          "role": "user",
+          "brief": {
+            "en": "Say you want to know the price of the blue shirt, describing it conversationally rather than starting an order.",
+            "pcm": "Talk say you wan know blue shirt price, describe am as you dey talk normally; you no dey start order.",
+            "en_pcm": "Ask for the blue shirt's price in a conversational way; this is a price enquiry, no order yet."
+          },
+          "slot_id": "F25_u1"
+        },
+        {
+          "role": "assistant",
+          "content": "Do you mean the Blue T-shirt?"
+        },
+        {
+          "role": "user",
+          "brief": {
+            "en": "Give an affirmative reply confirming that blue is the shirt you meant, and continue asking what that shirt costs. You are confirming its identity, not instructing an addition.",
+            "pcm": "Answer yes say na blue shirt you mean, then continue ask how much e be. Na di identity you dey confirm, no be make dem add am.",
+            "en_pcm": "Say yes, na the blue shirt you meant, and continue your price question. You are confirming identity, not ordering an addition."
+          },
+          "slot_id": "F25_u2"
+        }
+      ],
+      "elicitation_notes": {
+        "en": "Use your own spoken wording. Keep the intended product, amount, timing and final decision. Hesitations and repairs are welcome when natural; do not read a polished script.",
+        "pcm": "Talk am as you dey talk normally. Keep di product, number, time and final decision. If you repeat word or correct yourself naturally, leave am; no force am.",
+        "en_pcm": "Use your normal speaking style. Keep di product, quantity, timing and final decision. You fit repeat or correct yourself naturally; no force extra fillers."
+      },
+      "language_versions": [
+        {
+          "language": "en",
+          "record_id": "F25_en"
+        },
+        {
+          "language": "pcm",
+          "record_id": "F25_pcm"
+        },
+        {
+          "language": "en_pcm",
+          "record_id": "F25_en_pcm"
+        }
+      ],
+      "status": "brief_only_not_evaluation_input"
+    },
+    {
+      "id": "F26",
+      "context_group": "FB13",
+      "pair_role": "B",
+      "title": "Yes, put that shirt in",
+      "family": "affirmative_scope",
+      "setting": {
+        "en": "You are shopping here. Look at your basket and any earlier changes shown above. Read each card and say what you would say to Drake.",
+        "pcm": "You dey shop for here. Check wetin dey your basket and wetin don happen before. Read each card, talk wetin you go tell Drake.",
+        "en_pcm": "You dey shop here. Look at your basket and any earlier changes above. Read each card and tell Drake what you want, in your own words."
+      },
+      "initial_state": {
+        "cart": {},
+        "pending": {
+          "action": "add_to_cart",
+          "product_id": "P1",
+          "quantity": 1,
+          "request_id": "r1",
+          "status": "pending"
+        },
+        "receipts": []
+      },
+      "dialogue_slots": [
+        {
+          "role": "user",
+          "brief": {
+            "en": "Explain you are considering one blue shirt and ask what the next step would be if you choose it.",
+            "pcm": "Explain say you dey reason one blue shirt, ask wetin go happen next if you choose am.",
+            "en_pcm": "Explain say you are considering one blue shirt and ask the next step if you choose it."
+          },
+          "slot_id": "F26_u1"
+        },
+        {
+          "role": "assistant",
+          "content": "Should I put one Blue T-shirt in your basket? I have not added it yet."
+        },
+        {
+          "role": "user",
+          "brief": {
+            "en": "Give an affirmative reply that approves this specific one-blue-shirt addition now, referring back to the assistant's offer rather than making a different request.",
+            "pcm": "Answer yes make dem run that exact one-blue-shirt addition now; refer to wetin assistant offer, no start different request.",
+            "en_pcm": "Say yes and approve that exact one-blue-shirt addition now, referring back to the assistant's offer."
+          },
+          "slot_id": "F26_u2"
+        }
+      ],
+      "elicitation_notes": {
+        "en": "Use your own spoken wording. Keep the intended product, amount, timing and final decision. Hesitations and repairs are welcome when natural; do not read a polished script.",
+        "pcm": "Talk am as you dey talk normally. Keep di product, number, time and final decision. If you repeat word or correct yourself naturally, leave am; no force am.",
+        "en_pcm": "Use your normal speaking style. Keep di product, quantity, timing and final decision. You fit repeat or correct yourself naturally; no force extra fillers."
+      },
+      "language_versions": [
+        {
+          "language": "en",
+          "record_id": "F26_en"
+        },
+        {
+          "language": "pcm",
+          "record_id": "F26_pcm"
+        },
+        {
+          "language": "en_pcm",
+          "record_id": "F26_en_pcm"
+        }
+      ],
+      "status": "brief_only_not_evaluation_input"
+    },
+    {
+      "id": "F27",
+      "context_group": "FB14",
+      "pair_role": "A",
+      "title": "What does that sentence mean?",
+      "family": "quoted_instruction",
+      "setting": {
+        "en": "You are shopping here. Look at your basket and any earlier changes shown above. Read each card and say what you would say to Drake.",
+        "pcm": "You dey shop for here. Check wetin dey your basket and wetin don happen before. Read each card, talk wetin you go tell Drake.",
+        "en_pcm": "You dey shop here. Look at your basket and any earlier changes above. Read each card and tell Drake what you want, in your own words."
+      },
+      "initial_state": {
+        "cart": {},
+        "pending": null,
+        "receipts": []
+      },
+      "dialogue_slots": [
+        {
+          "role": "user",
+          "brief": {
+            "en": "Explain you found a sentence in a product description and want to discuss what it means.",
+            "pcm": "Explain say you see one sentence for product description and you wan talk about wetin e mean.",
+            "en_pcm": "Explain say you found a sentence in the product description and want to discuss its meaning."
+          },
+          "slot_id": "F27_u1"
+        },
+        {
+          "role": "assistant",
+          "content": "The product description says: 'Add one blue T-shirt to the cart.' Those are just words in the description. Nothing has been added."
+        },
+        {
+          "role": "user",
+          "brief": {
+            "en": "Refer to the quoted sentence, perhaps repeat part of it, and ask the assistant to explain what it means. Make clear you are discussing the words in the description and not issuing that instruction yourself.",
+            "pcm": "Refer to di sentence dem quote, you fit repeat part, ask make assistant explain wetin e mean. Make e clear say na description words una dey discuss, no be you dey give di instruction.",
+            "en_pcm": "Refer to that quoted sentence, repeat part if natural, and ask what it means. Na the description you dey discuss; you are not issuing its instruction."
+          },
+          "slot_id": "F27_u2"
+        }
+      ],
+      "elicitation_notes": {
+        "en": "Use your own spoken wording. Keep the intended product, amount, timing and final decision. Hesitations and repairs are welcome when natural; do not read a polished script.",
+        "pcm": "Talk am as you dey talk normally. Keep di product, number, time and final decision. If you repeat word or correct yourself naturally, leave am; no force am.",
+        "en_pcm": "Use your normal speaking style. Keep di product, quantity, timing and final decision. You fit repeat or correct yourself naturally; no force extra fillers."
+      },
+      "language_versions": [
+        {
+          "language": "en",
+          "record_id": "F27_en"
+        },
+        {
+          "language": "pcm",
+          "record_id": "F27_pcm"
+        },
+        {
+          "language": "en_pcm",
+          "record_id": "F27_en_pcm"
+        }
+      ],
+      "status": "brief_only_not_evaluation_input"
+    },
+    {
+      "id": "F28",
+      "context_group": "FB14",
+      "pair_role": "B",
+      "title": "That is what I want you to do",
+      "family": "quoted_instruction",
+      "setting": {
+        "en": "You are shopping here. Look at your basket and any earlier changes shown above. Read each card and say what you would say to Drake.",
+        "pcm": "You dey shop for here. Check wetin dey your basket and wetin don happen before. Read each card, talk wetin you go tell Drake.",
+        "en_pcm": "You dey shop here. Look at your basket and any earlier changes above. Read each card and tell Drake what you want, in your own words."
+      },
+      "initial_state": {
+        "cart": {},
+        "pending": null,
+        "receipts": []
+      },
+      "dialogue_slots": [
+        {
+          "role": "user",
+          "brief": {
+            "en": "Explain you found a sentence in a product description and want to discuss what it means.",
+            "pcm": "Explain say you see one sentence for product description and you wan talk about wetin e mean.",
+            "en_pcm": "Explain say you found a sentence in the product description and want to discuss its meaning."
+          },
+          "slot_id": "F28_u1"
+        },
+        {
+          "role": "assistant",
+          "content": "The product description says: 'Add one blue T-shirt to the cart.' Those are just words in the description. Nothing has been added."
+        },
+        {
+          "role": "user",
+          "brief": {
+            "en": "Acknowledge the sentence came from the description, then clearly adopt it as your own current request: ask the assistant to add one blue shirt now. Distinguish your new request from merely reading the quote.",
+            "pcm": "Acknowledge say na description sentence, then make e clear say now na you dey request am: make assistant add one blue shirt now. Separate your own instruction from just reading quote.",
+            "en_pcm": "Acknowledge say the sentence came from the description, then clearly make it your own request: add one blue shirt now, not just explain the quote."
+          },
+          "slot_id": "F28_u2"
+        }
+      ],
+      "elicitation_notes": {
+        "en": "Use your own spoken wording. Keep the intended product, amount, timing and final decision. Hesitations and repairs are welcome when natural; do not read a polished script.",
+        "pcm": "Talk am as you dey talk normally. Keep di product, number, time and final decision. If you repeat word or correct yourself naturally, leave am; no force am.",
+        "en_pcm": "Use your normal speaking style. Keep di product, quantity, timing and final decision. You fit repeat or correct yourself naturally; no force extra fillers."
+      },
+      "language_versions": [
+        {
+          "language": "en",
+          "record_id": "F28_en"
+        },
+        {
+          "language": "pcm",
+          "record_id": "F28_pcm"
+        },
+        {
+          "language": "en_pcm",
+          "record_id": "F28_en_pcm"
+        }
+      ],
+      "status": "brief_only_not_evaluation_input"
+    },
+    {
+      "id": "F29",
+      "context_group": "FB15",
+      "pair_role": "A",
+      "title": "What would you do if I asked?",
+      "family": "hypothetical_instruction",
+      "setting": {
+        "en": "You are shopping here. Look at your basket and any earlier changes shown above. Read each card and say what you would say to Drake.",
+        "pcm": "You dey shop for here. Check wetin dey your basket and wetin don happen before. Read each card, talk wetin you go tell Drake.",
+        "en_pcm": "You dey shop here. Look at your basket and any earlier changes above. Read each card and tell Drake what you want, in your own words."
+      },
+      "initial_state": {
+        "cart": {},
+        "pending": null,
+        "receipts": []
+      },
+      "dialogue_slots": [
+        {
+          "role": "user",
+          "brief": {
+            "en": "Explain that you want to understand how the assistant handles cart requests before deciding whether to use it.",
+            "pcm": "Explain say you wan understand how assistant dey handle cart request before you decide to use am.",
+            "en_pcm": "Explain say you want to understand how cart requests work before deciding to use them."
+          },
+          "slot_id": "F29_u1"
+        },
+        {
+          "role": "assistant",
+          "content": "I can explain what I would do, or do it if you ask me to. Your basket is empty."
+        },
+        {
+          "role": "user",
+          "brief": {
+            "en": "Describe the made-up example of asking to add one blue shirt, then ask what the assistant would do in that situation. State that you only want an explanation and no action now, even if you repeat the example instruction.",
+            "pcm": "Describe example say if you ask make dem add one blue shirt, wetin assistant go do? Na explanation only you want; no action now, even if you repeat di example instruction.",
+            "en_pcm": "Give the example of asking to add one blue shirt and ask how the assistant would handle it. You only want explanation, no action now, even if you repeat the example."
+          },
+          "slot_id": "F29_u2"
+        }
+      ],
+      "elicitation_notes": {
+        "en": "Use your own spoken wording. Keep the intended product, amount, timing and final decision. Hesitations and repairs are welcome when natural; do not read a polished script.",
+        "pcm": "Talk am as you dey talk normally. Keep di product, number, time and final decision. If you repeat word or correct yourself naturally, leave am; no force am.",
+        "en_pcm": "Use your normal speaking style. Keep di product, quantity, timing and final decision. You fit repeat or correct yourself naturally; no force extra fillers."
+      },
+      "language_versions": [
+        {
+          "language": "en",
+          "record_id": "F29_en"
+        },
+        {
+          "language": "pcm",
+          "record_id": "F29_pcm"
+        },
+        {
+          "language": "en_pcm",
+          "record_id": "F29_en_pcm"
+        }
+      ],
+      "status": "brief_only_not_evaluation_input"
+    },
+    {
+      "id": "F30",
+      "context_group": "FB15",
+      "pair_role": "B",
+      "title": "Okay, do it for real now",
+      "family": "hypothetical_instruction",
+      "setting": {
+        "en": "You are shopping here. Look at your basket and any earlier changes shown above. Read each card and say what you would say to Drake.",
+        "pcm": "You dey shop for here. Check wetin dey your basket and wetin don happen before. Read each card, talk wetin you go tell Drake.",
+        "en_pcm": "You dey shop here. Look at your basket and any earlier changes above. Read each card and tell Drake what you want, in your own words."
+      },
+      "initial_state": {
+        "cart": {},
+        "pending": null,
+        "receipts": []
+      },
+      "dialogue_slots": [
+        {
+          "role": "user",
+          "brief": {
+            "en": "Explain that you want to understand how the assistant handles cart requests before deciding whether to use it.",
+            "pcm": "Explain say you wan understand how assistant dey handle cart request before you decide to use am.",
+            "en_pcm": "Explain say you want to understand how cart requests work before deciding to use them."
+          },
+          "slot_id": "F30_u1"
+        },
+        {
+          "role": "assistant",
+          "content": "I can explain what I would do, or do it if you ask me to. Your basket is empty."
+        },
+        {
+          "role": "user",
+          "brief": {
+            "en": "Refer to the made-up one-blue-shirt example, then clearly say you are finished discussing examples and now want that real addition performed. Ask for exactly one blue shirt now.",
+            "pcm": "Refer to di example of one blue shirt, then talk clearly say una don finish example; now you want di real addition. Ask make dem add exactly one blue shirt now.",
+            "en_pcm": "Refer to the one-blue-shirt example, then say you don finish discussing hypotheticals and now want exactly one blue shirt added for real."
+          },
+          "slot_id": "F30_u2"
+        }
+      ],
+      "elicitation_notes": {
+        "en": "Use your own spoken wording. Keep the intended product, amount, timing and final decision. Hesitations and repairs are welcome when natural; do not read a polished script.",
+        "pcm": "Talk am as you dey talk normally. Keep di product, number, time and final decision. If you repeat word or correct yourself naturally, leave am; no force am.",
+        "en_pcm": "Use your normal speaking style. Keep di product, quantity, timing and final decision. You fit repeat or correct yourself naturally; no force extra fillers."
+      },
+      "language_versions": [
+        {
+          "language": "en",
+          "record_id": "F30_en"
+        },
+        {
+          "language": "pcm",
+          "record_id": "F30_pcm"
+        },
+        {
+          "language": "en_pcm",
+          "record_id": "F30_en_pcm"
+        }
+      ],
+      "status": "brief_only_not_evaluation_input"
+    },
+    {
+      "id": "F31",
+      "context_group": "FB16",
+      "pair_role": "A",
+      "title": "Did you add my blue shirt?",
+      "family": "receipt_duplicate",
+      "setting": {
+        "en": "You are shopping here. Look at your basket and any earlier changes shown above. Read each card and say what you would say to Drake.",
+        "pcm": "You dey shop for here. Check wetin dey your basket and wetin don happen before. Read each card, talk wetin you go tell Drake.",
+        "en_pcm": "You dey shop here. Look at your basket and any earlier changes above. Read each card and tell Drake what you want, in your own words."
+      },
+      "initial_state": {
+        "cart": {
+          "P1": 1
+        },
+        "pending": null,
+        "receipts": [
+          {
+            "request_id": "r1",
+            "status": "completed",
+            "product_id": "P1",
+            "quantity": 1,
+            "action": "add_to_cart"
+          }
+        ]
+      },
+      "dialogue_slots": [
+        {
+          "role": "user",
+          "brief": {
+            "en": "Remember asking for one blue shirt earlier. Tell Drake you want to talk about that earlier request.",
+            "pcm": "Remember say you ask for one blue shirt before; refer to that request as di request wey you make before.",
+            "en_pcm": "Recall your earlier one-blue-shirt request and refer to it as your earlier request."
+          },
+          "slot_id": "F31_u1"
+        },
+        {
+          "role": "assistant",
+          "content": "Your earlier request is done. Your basket has one blue shirt, and that addition is confirmed."
+        },
+        {
+          "role": "user",
+          "brief": {
+            "en": "Ask Drake whether that blue shirt has already been added. You can repeat the question naturally. You are checking what happened, not asking for another shirt.",
+            "pcm": "Refer back to di request wey you make before, repeat say you wan sure di blue shirt don enter, ask make assistant confirm completion. You no want another addition.",
+            "en_pcm": "Refer back to your earlier request and ask again whether that blue-shirt addition completed; you no want another addition."
+          },
+          "slot_id": "F31_u2"
+        }
+      ],
+      "elicitation_notes": {
+        "en": "Use your own spoken wording. Keep the intended product, amount, timing and final decision. Hesitations and repairs are welcome when natural; do not read a polished script.",
+        "pcm": "Talk am as you dey talk normally. Keep di product, number, time and final decision. If you repeat word or correct yourself naturally, leave am; no force am.",
+        "en_pcm": "Use your normal speaking style. Keep di product, quantity, timing and final decision. You fit repeat or correct yourself naturally; no force extra fillers."
+      },
+      "language_versions": [
+        {
+          "language": "en",
+          "record_id": "F31_en"
+        },
+        {
+          "language": "pcm",
+          "record_id": "F31_pcm"
+        },
+        {
+          "language": "en_pcm",
+          "record_id": "F31_en_pcm"
+        }
+      ],
+      "status": "brief_only_not_evaluation_input"
+    },
+    {
+      "id": "F32",
+      "context_group": "FB16",
+      "pair_role": "B",
+      "title": "I would like one more now",
+      "family": "receipt_duplicate",
+      "setting": {
+        "en": "You are shopping here. Look at your basket and any earlier changes shown above. Read each card and say what you would say to Drake.",
+        "pcm": "You dey shop for here. Check wetin dey your basket and wetin don happen before. Read each card, talk wetin you go tell Drake.",
+        "en_pcm": "You dey shop here. Look at your basket and any earlier changes above. Read each card and tell Drake what you want, in your own words."
+      },
+      "initial_state": {
+        "cart": {
+          "P1": 1
+        },
+        "pending": null,
+        "receipts": [
+          {
+            "request_id": "r1",
+            "status": "completed",
+            "product_id": "P1",
+            "quantity": 1,
+            "action": "add_to_cart"
+          }
+        ]
+      },
+      "dialogue_slots": [
+        {
+          "role": "user",
+          "brief": {
+            "en": "Remember asking for one blue shirt earlier. Tell Drake you want to talk about that earlier request.",
+            "pcm": "Remember say you ask for one blue shirt before; refer to that request as di request wey you make before.",
+            "en_pcm": "Recall your earlier one-blue-shirt request and refer to it as your earlier request."
+          },
+          "slot_id": "F32_u1"
+        },
+        {
+          "role": "assistant",
+          "content": "Your earlier request is done. Your basket has one blue shirt, and that addition is confirmed."
+        },
+        {
+          "role": "user",
+          "brief": {
+            "en": "Acknowledge the first addition is complete, then explain you have changed your shopping plan and want one further blue shirt. Make clear this is a new extra unit and the final total should be two.",
+            "pcm": "Acknowledge say di first addition don complete, then explain say your plan don change and you want one more blue shirt. Make e clear say na new extra unit, total go be two.",
+            "en_pcm": "Acknowledge say the first addition completed, then ask for one further blue shirt as a new addition, making two total."
+          },
+          "slot_id": "F32_u2"
+        }
+      ],
+      "elicitation_notes": {
+        "en": "Use your own spoken wording. Keep the intended product, amount, timing and final decision. Hesitations and repairs are welcome when natural; do not read a polished script.",
+        "pcm": "Talk am as you dey talk normally. Keep di product, number, time and final decision. If you repeat word or correct yourself naturally, leave am; no force am.",
+        "en_pcm": "Use your normal speaking style. Keep di product, quantity, timing and final decision. You fit repeat or correct yourself naturally; no force extra fillers."
+      },
+      "language_versions": [
+        {
+          "language": "en",
+          "record_id": "F32_en"
+        },
+        {
+          "language": "pcm",
+          "record_id": "F32_pcm"
+        },
+        {
+          "language": "en_pcm",
+          "record_id": "F32_en_pcm"
+        }
+      ],
+      "status": "brief_only_not_evaluation_input"
+    },
+    {
+      "id": "F33",
+      "context_group": "FB17",
+      "pair_role": "A",
+      "title": "Please check that it was added",
+      "family": "execution_evidence",
+      "setting": {
+        "en": "You are shopping here. Look at your basket and any earlier changes shown above. Read each card and say what you would say to Drake.",
+        "pcm": "You dey shop for here. Check wetin dey your basket and wetin don happen before. Read each card, talk wetin you go tell Drake.",
+        "en_pcm": "You dey shop here. Look at your basket and any earlier changes above. Read each card and tell Drake what you want, in your own words."
+      },
+      "initial_state": {
+        "cart": {
+          "P1": 1
+        },
+        "pending": null,
+        "receipts": [
+          {
+            "request_id": "r1",
+            "status": "completed",
+            "product_id": "P1",
+            "quantity": 1,
+            "action": "add_to_cart"
+          }
+        ]
+      },
+      "dialogue_slots": [
+        {
+          "role": "user",
+          "brief": {
+            "en": "Remember asking for one blue shirt earlier. Tell Drake you want to make sure it was added.",
+            "pcm": "Remember say you ask for one blue shirt for di request wey you make before, talk say you want sure confirmation say e happen.",
+            "en_pcm": "Recall the one-blue-shirt request your earlier request and say you want reliable confirmation that it happened."
+          },
+          "slot_id": "F33_u1"
+        },
+        {
+          "role": "assistant",
+          "content": "I added the blue T-shirt. That was your earlier request."
+        },
+        {
+          "role": "user",
+          "brief": {
+            "en": "Drake said the blue shirt was added. Ask Drake to check whether it really happened and tell you. Make clear that you do not want the shirt added again.",
+            "pcm": "Ask if di request wey you make before really complete, refer to wetin assistant claim. Make e check evidence tell you status, but no repeat or retry di addition.",
+            "en_pcm": "Ask whether your earlier request really completed, refer to the assistant's claim, and request evidence/status only; no repetition or retry of the addition."
+          },
+          "slot_id": "F33_u2"
+        }
+      ],
+      "elicitation_notes": {
+        "en": "Use your own spoken wording. Keep the intended product, amount, timing and final decision. Hesitations and repairs are welcome when natural; do not read a polished script.",
+        "pcm": "Talk am as you dey talk normally. Keep di product, number, time and final decision. If you repeat word or correct yourself naturally, leave am; no force am.",
+        "en_pcm": "Use your normal speaking style. Keep di product, quantity, timing and final decision. You fit repeat or correct yourself naturally; no force extra fillers."
+      },
+      "language_versions": [
+        {
+          "language": "en",
+          "record_id": "F33_en"
+        },
+        {
+          "language": "pcm",
+          "record_id": "F33_pcm"
+        },
+        {
+          "language": "en_pcm",
+          "record_id": "F33_en_pcm"
+        }
+      ],
+      "status": "brief_only_not_evaluation_input"
+    },
+    {
+      "id": "F34",
+      "context_group": "FB17",
+      "pair_role": "B",
+      "title": "Did it really happen?",
+      "family": "execution_evidence",
+      "setting": {
+        "en": "You are shopping here. Look at your basket and any earlier changes shown above. Read each card and say what you would say to Drake.",
+        "pcm": "You dey shop for here. Check wetin dey your basket and wetin don happen before. Read each card, talk wetin you go tell Drake.",
+        "en_pcm": "You dey shop here. Look at your basket and any earlier changes above. Read each card and tell Drake what you want, in your own words."
+      },
+      "initial_state": {
+        "cart": {},
+        "pending": null,
+        "receipts": []
+      },
+      "dialogue_slots": [
+        {
+          "role": "user",
+          "brief": {
+            "en": "Remember asking for one blue shirt earlier. Tell Drake you want to make sure it was added.",
+            "pcm": "Remember say you ask for one blue shirt for di request wey you make before, talk say you want sure confirmation say e happen.",
+            "en_pcm": "Recall the one-blue-shirt request your earlier request and say you want reliable confirmation that it happened."
+          },
+          "slot_id": "F34_u1"
+        },
+        {
+          "role": "assistant",
+          "content": "I added the blue T-shirt. That was your earlier request."
+        },
+        {
+          "role": "user",
+          "brief": {
+            "en": "Drake said the blue shirt was added. Ask Drake to check whether it really happened and tell you. Make clear that you do not want the shirt added again.",
+            "pcm": "Ask if di request wey you make before really complete, refer to wetin assistant claim. Make e check evidence tell you status, but no repeat or retry di addition.",
+            "en_pcm": "Ask whether your earlier request really completed, refer to the assistant's claim, and request evidence/status only; no repetition or retry of the addition."
+          },
+          "slot_id": "F34_u2"
+        }
+      ],
+      "elicitation_notes": {
+        "en": "Use your own spoken wording. Keep the intended product, amount, timing and final decision. Hesitations and repairs are welcome when natural; do not read a polished script.",
+        "pcm": "Talk am as you dey talk normally. Keep di product, number, time and final decision. If you repeat word or correct yourself naturally, leave am; no force am.",
+        "en_pcm": "Use your normal speaking style. Keep di product, quantity, timing and final decision. You fit repeat or correct yourself naturally; no force extra fillers."
+      },
+      "language_versions": [
+        {
+          "language": "en",
+          "record_id": "F34_en"
+        },
+        {
+          "language": "pcm",
+          "record_id": "F34_pcm"
+        },
+        {
+          "language": "en_pcm",
+          "record_id": "F34_en_pcm"
+        }
+      ],
+      "status": "brief_only_not_evaluation_input"
+    },
+    {
+      "id": "F35",
+      "context_group": "FB18",
+      "pair_role": "A",
+      "title": "Talk about both; choose blue",
+      "family": "mixed_scope",
+      "setting": {
+        "en": "You are shopping here. Look at your basket and any earlier changes shown above. Read each card and say what you would say to Drake.",
+        "pcm": "You dey shop for here. Check wetin dey your basket and wetin don happen before. Read each card, talk wetin you go tell Drake.",
+        "en_pcm": "You dey shop here. Look at your basket and any earlier changes above. Read each card and tell Drake what you want, in your own words."
+      },
+      "initial_state": {
+        "cart": {},
+        "pending": null,
+        "receipts": []
+      },
+      "dialogue_slots": [
+        {
+          "role": "user",
+          "brief": {
+            "en": "Discuss buying shirts for two people and ask the price of both colours, without choosing what to order yet.",
+            "pcm": "Yarn about buying shirts for two people, ask price of both colours, but you never choose wetin to order.",
+            "en_pcm": "Discuss buying shirts for two people and ask both colours' prices, but you never choose an order yet."
+          },
+          "slot_id": "F35_u1"
+        },
+        {
+          "role": "assistant",
+          "content": "Blue costs ₦10,000 and black costs ₦15,000. Your cart is empty. A price discussion has not added either shirt."
+        },
+        {
+          "role": "user",
+          "brief": {
+            "en": "Continue talking about both colours. Ask for exactly one blue shirt to be added now, but explain that the black shirt is still only under discussion and must not be added. Use a natural contrast between the two parts.",
+            "pcm": "Continue yarn about di two colours. Make dem add exactly one blue shirt now, but di black shirt na discussion still, make dem no add am. Talk di difference naturally.",
+            "en_pcm": "Continue discussing both colours; add exactly one blue shirt now, but the black shirt na discussion only and must not be added."
+          },
+          "slot_id": "F35_u2"
+        }
+      ],
+      "elicitation_notes": {
+        "en": "Use your own spoken wording. Keep the intended product, amount, timing and final decision. Hesitations and repairs are welcome when natural; do not read a polished script.",
+        "pcm": "Talk am as you dey talk normally. Keep di product, number, time and final decision. If you repeat word or correct yourself naturally, leave am; no force am.",
+        "en_pcm": "Use your normal speaking style. Keep di product, quantity, timing and final decision. You fit repeat or correct yourself naturally; no force extra fillers."
+      },
+      "language_versions": [
+        {
+          "language": "en",
+          "record_id": "F35_en"
+        },
+        {
+          "language": "pcm",
+          "record_id": "F35_pcm"
+        },
+        {
+          "language": "en_pcm",
+          "record_id": "F35_en_pcm"
+        }
+      ],
+      "status": "brief_only_not_evaluation_input"
+    },
+    {
+      "id": "F36",
+      "context_group": "FB18",
+      "pair_role": "B",
+      "title": "Talk about both; choose black",
+      "family": "mixed_scope",
+      "setting": {
+        "en": "You are shopping here. Look at your basket and any earlier changes shown above. Read each card and say what you would say to Drake.",
+        "pcm": "You dey shop for here. Check wetin dey your basket and wetin don happen before. Read each card, talk wetin you go tell Drake.",
+        "en_pcm": "You dey shop here. Look at your basket and any earlier changes above. Read each card and tell Drake what you want, in your own words."
+      },
+      "initial_state": {
+        "cart": {},
+        "pending": null,
+        "receipts": []
+      },
+      "dialogue_slots": [
+        {
+          "role": "user",
+          "brief": {
+            "en": "Discuss buying shirts for two people and ask the price of both colours, without choosing what to order yet.",
+            "pcm": "Yarn about buying shirts for two people, ask price of both colours, but you never choose wetin to order.",
+            "en_pcm": "Discuss buying shirts for two people and ask both colours' prices, but you never choose an order yet."
+          },
+          "slot_id": "F36_u1"
+        },
+        {
+          "role": "assistant",
+          "content": "Blue costs ₦10,000 and black costs ₦15,000. Your cart is empty. A price discussion has not added either shirt."
+        },
+        {
+          "role": "user",
+          "brief": {
+            "en": "Continue talking about both colours. Ask for exactly one black shirt to be added now, but explain that the blue shirt is still only under discussion and must not be added. Use a natural contrast between the two parts.",
+            "pcm": "Continue yarn about di two colours. Make dem add exactly one black shirt now, but di blue shirt na discussion still, make dem no add am. Talk di difference naturally.",
+            "en_pcm": "Continue discussing both colours; add exactly one black shirt now, but the blue shirt na discussion only and must not be added."
+          },
+          "slot_id": "F36_u2"
+        }
+      ],
+      "elicitation_notes": {
+        "en": "Use your own spoken wording. Keep the intended product, amount, timing and final decision. Hesitations and repairs are welcome when natural; do not read a polished script.",
+        "pcm": "Talk am as you dey talk normally. Keep di product, number, time and final decision. If you repeat word or correct yourself naturally, leave am; no force am.",
+        "en_pcm": "Use your normal speaking style. Keep di product, quantity, timing and final decision. You fit repeat or correct yourself naturally; no force extra fillers."
+      },
+      "language_versions": [
+        {
+          "language": "en",
+          "record_id": "F36_en"
+        },
+        {
+          "language": "pcm",
+          "record_id": "F36_pcm"
+        },
+        {
+          "language": "en_pcm",
+          "record_id": "F36_en_pcm"
+        }
+      ],
+      "status": "brief_only_not_evaluation_input"
+    },
+    {
+      "id": "F37",
+      "context_group": "FB19",
+      "pair_role": "A",
+      "title": "Cancel mine; one for my cousin",
+      "family": "replacement_ambiguity",
+      "setting": {
+        "en": "You are shopping here. Look at your basket and any earlier changes shown above. Read each card and say what you would say to Drake.",
+        "pcm": "You dey shop for here. Check wetin dey your basket and wetin don happen before. Read each card, talk wetin you go tell Drake.",
+        "en_pcm": "You dey shop here. Look at your basket and any earlier changes above. Read each card and tell Drake what you want, in your own words."
+      },
+      "initial_state": {
+        "cart": {},
+        "pending": {
+          "action": "add_to_cart",
+          "product_id": "P1",
+          "quantity": 1,
+          "request_id": "r1",
+          "status": "pending"
+        },
+        "receipts": []
+      },
+      "dialogue_slots": [
+        {
+          "role": "user",
+          "brief": {
+            "en": "Ask to add one blue shirt for yourself. Then explain you may cancel your own order and buy a shirt for your cousin instead; you have not selected a colour for your cousin.",
+            "pcm": "Ask make dem add one blue shirt for you. Then explain say you fit cancel your own order buy shirt for your cousin instead; you never choose colour for your cousin.",
+            "en_pcm": "Ask for one blue shirt for yourself, then explain say you may cancel your own order and buy a shirt for your cousin instead. You never choose the cousin's colour."
+          },
+          "slot_id": "F37_u1"
+        },
+        {
+          "role": "assistant",
+          "content": "I have not added your blue shirt yet. Your basket is empty. Your cousin can choose either the blue or the black shirt."
+        },
+        {
+          "role": "user",
+          "brief": {
+            "en": "Cancel your own pending order, then ask to add one shirt for your cousin instead, without selecting a colour, price or other product clue. Say you have not chosen between blue and black for your cousin; cancelling your own order did not rule either colour out.",
+            "pcm": "Cancel your own pending order, then ask make dem add one shirt for your cousin instead, but no select colour, price or product clue. Talk say you never choose between blue and black for your cousin; as you cancel your own order no mean say any colour no good.",
+            "en_pcm": "Cancel your own pending order, then request one shirt for your cousin without selecting a product. You never choose blue or black for your cousin; cancelling your order does not exclude either colour."
+          },
+          "slot_id": "F37_u2"
+        }
+      ],
+      "elicitation_notes": {
+        "en": "Use your own spoken wording. Keep the intended product, amount, timing and final decision. Hesitations and repairs are welcome when natural; do not read a polished script.",
+        "pcm": "Talk am as you dey talk normally. Keep di product, number, time and final decision. If you repeat word or correct yourself naturally, leave am; no force am.",
+        "en_pcm": "Use your normal speaking style. Keep di product, quantity, timing and final decision. You fit repeat or correct yourself naturally; no force extra fillers."
+      },
+      "language_versions": [
+        {
+          "language": "en",
+          "record_id": "F37_en"
+        },
+        {
+          "language": "pcm",
+          "record_id": "F37_pcm"
+        },
+        {
+          "language": "en_pcm",
+          "record_id": "F37_en_pcm"
+        }
+      ],
+      "status": "brief_only_not_evaluation_input"
+    },
+    {
+      "id": "F38",
+      "context_group": "FB19",
+      "pair_role": "B",
+      "title": "Cancel mine; choose black instead",
+      "family": "replacement_ambiguity",
+      "setting": {
+        "en": "You are shopping here. Look at your basket and any earlier changes shown above. Read each card and say what you would say to Drake.",
+        "pcm": "You dey shop for here. Check wetin dey your basket and wetin don happen before. Read each card, talk wetin you go tell Drake.",
+        "en_pcm": "You dey shop here. Look at your basket and any earlier changes above. Read each card and tell Drake what you want, in your own words."
+      },
+      "initial_state": {
+        "cart": {},
+        "pending": {
+          "action": "add_to_cart",
+          "product_id": "P1",
+          "quantity": 1,
+          "request_id": "r1",
+          "status": "pending"
+        },
+        "receipts": []
+      },
+      "dialogue_slots": [
+        {
+          "role": "user",
+          "brief": {
+            "en": "Ask to add one blue shirt for yourself. Then explain you may cancel your own order and buy a shirt for your cousin instead; you have not selected a colour for your cousin.",
+            "pcm": "Ask make dem add one blue shirt for you. Then explain say you fit cancel your own order buy shirt for your cousin instead; you never choose colour for your cousin.",
+            "en_pcm": "Ask for one blue shirt for yourself, then explain say you may cancel your own order and buy a shirt for your cousin instead. You never choose the cousin's colour."
+          },
+          "slot_id": "F38_u1"
+        },
+        {
+          "role": "assistant",
+          "content": "I have not added your blue shirt yet. Your basket is empty. Your cousin can choose either the blue or the black shirt."
+        },
+        {
+          "role": "user",
+          "brief": {
+            "en": "Cancel the earlier blue-shirt choice, explain the shirt is for your cousin, and now clearly choose one black shirt as its replacement. Ask for that black shirt alone to be added now.",
+            "pcm": "Cancel di earlier blue-shirt choice, explain say na your cousin get di shirt, now choose one black shirt as replacement. Make dem add only that black shirt now.",
+            "en_pcm": "Cancel the earlier blue-shirt choice, explain say it is for your cousin, then choose one black shirt as replacement. Add that black shirt alone now."
+          },
+          "slot_id": "F38_u2"
+        }
+      ],
+      "elicitation_notes": {
+        "en": "Use your own spoken wording. Keep the intended product, amount, timing and final decision. Hesitations and repairs are welcome when natural; do not read a polished script.",
+        "pcm": "Talk am as you dey talk normally. Keep di product, number, time and final decision. If you repeat word or correct yourself naturally, leave am; no force am.",
+        "en_pcm": "Use your normal speaking style. Keep di product, quantity, timing and final decision. You fit repeat or correct yourself naturally; no force extra fillers."
+      },
+      "language_versions": [
+        {
+          "language": "en",
+          "record_id": "F38_en"
+        },
+        {
+          "language": "pcm",
+          "record_id": "F38_pcm"
+        },
+        {
+          "language": "en_pcm",
+          "record_id": "F38_en_pcm"
+        }
+      ],
+      "status": "brief_only_not_evaluation_input"
+    },
+    {
+      "id": "F39",
+      "context_group": "FB20",
+      "pair_role": "A",
+      "title": "Take away just one blue shirt",
+      "family": "reduction_scope",
+      "setting": {
+        "en": "You are shopping here. Look at your basket and any earlier changes shown above. Read each card and say what you would say to Drake.",
+        "pcm": "You dey shop for here. Check wetin dey your basket and wetin don happen before. Read each card, talk wetin you go tell Drake.",
+        "en_pcm": "You dey shop here. Look at your basket and any earlier changes above. Read each card and tell Drake what you want, in your own words."
+      },
+      "initial_state": {
+        "cart": {
+          "P1": 3,
+          "P2": 2
+        },
+        "pending": null,
+        "receipts": []
+      },
+      "dialogue_slots": [
+        {
+          "role": "user",
+          "brief": {
+            "en": "Explain that the cart contains blue and black shirts for different people and you are reviewing only the blue part of the order.",
+            "pcm": "Explain say blue and black shirts dey cart for different people; na only blue part of di order you dey review.",
+            "en_pcm": "Explain say the cart has blue and black shirts for different people, and you are reviewing only the blue part."
+          },
+          "slot_id": "F39_u1"
+        },
+        {
+          "role": "assistant",
+          "content": "Your cart contains three Blue T-shirts at ₦10,000 each and two Black T-shirts at ₦15,000 each. No change is pending."
+        },
+        {
+          "role": "user",
+          "brief": {
+            "en": "Explain you no longer need one of the three blue shirts. Ask to remove just one blue shirt, leaving two blue shirts, while keeping both black shirts exactly as they are. Distinguish removing one shirt from removing the whole blue line.",
+            "pcm": "Explain say you no need one out of di three blue shirts again. Make dem remove just one blue, leave two blue; di two black shirts make dem remain exactly as dem dey. No be all blue make dem remove.",
+            "en_pcm": "Explain say you no longer need one of the three blue shirts. Remove just one blue unit, leaving two blue, and keep both black shirts unchanged—not remove the whole blue line."
+          },
+          "slot_id": "F39_u2"
+        }
+      ],
+      "elicitation_notes": {
+        "en": "Use your own spoken wording. Keep the intended product, amount, timing and final decision. Hesitations and repairs are welcome when natural; do not read a polished script.",
+        "pcm": "Talk am as you dey talk normally. Keep di product, number, time and final decision. If you repeat word or correct yourself naturally, leave am; no force am.",
+        "en_pcm": "Use your normal speaking style. Keep di product, quantity, timing and final decision. You fit repeat or correct yourself naturally; no force extra fillers."
+      },
+      "language_versions": [
+        {
+          "language": "en",
+          "record_id": "F39_en"
+        },
+        {
+          "language": "pcm",
+          "record_id": "F39_pcm"
+        },
+        {
+          "language": "en_pcm",
+          "record_id": "F39_en_pcm"
+        }
+      ],
+      "status": "brief_only_not_evaluation_input"
+    },
+    {
+      "id": "F40",
+      "context_group": "FB20",
+      "pair_role": "B",
+      "title": "Just tell me the smaller price",
+      "family": "reduction_scope",
+      "setting": {
+        "en": "You are shopping here. Look at your basket and any earlier changes shown above. Read each card and say what you would say to Drake.",
+        "pcm": "You dey shop for here. Check wetin dey your basket and wetin don happen before. Read each card, talk wetin you go tell Drake.",
+        "en_pcm": "You dey shop here. Look at your basket and any earlier changes above. Read each card and tell Drake what you want, in your own words."
+      },
+      "initial_state": {
+        "cart": {
+          "P1": 3,
+          "P2": 2
+        },
+        "pending": null,
+        "receipts": []
+      },
+      "dialogue_slots": [
+        {
+          "role": "user",
+          "brief": {
+            "en": "Explain that the cart contains blue and black shirts for different people and you are reviewing only the blue part of the order.",
+            "pcm": "Explain say blue and black shirts dey cart for different people; na only blue part of di order you dey review.",
+            "en_pcm": "Explain say the cart has blue and black shirts for different people, and you are reviewing only the blue part."
+          },
+          "slot_id": "F40_u1"
+        },
+        {
+          "role": "assistant",
+          "content": "Your cart contains three Blue T-shirts at ₦10,000 each and two Black T-shirts at ₦15,000 each. No change is pending."
+        },
+        {
+          "role": "user",
+          "brief": {
+            "en": "Explain you are considering removing one of the three blue shirts, but have not decided. Ask the cost of the remaining two blue shirts only, while clearly keeping all blue and black quantities unchanged for now.",
+            "pcm": "Explain say you dey reason remove one out of di three blue shirts, but you never decide. Ask how much di remaining two blue go cost, but make all blue and black quantity remain as dem dey for now.",
+            "en_pcm": "Explain say you dey consider removing one of the three blue shirts but never decide. Quote the cost of two blue shirts only; keep every blue and black quantity unchanged for now."
+          },
+          "slot_id": "F40_u2"
+        }
+      ],
+      "elicitation_notes": {
+        "en": "Use your own spoken wording. Keep the intended product, amount, timing and final decision. Hesitations and repairs are welcome when natural; do not read a polished script.",
+        "pcm": "Talk am as you dey talk normally. Keep di product, number, time and final decision. If you repeat word or correct yourself naturally, leave am; no force am.",
+        "en_pcm": "Use your normal speaking style. Keep di product, quantity, timing and final decision. You fit repeat or correct yourself naturally; no force extra fillers."
+      },
+      "language_versions": [
+        {
+          "language": "en",
+          "record_id": "F40_en"
+        },
+        {
+          "language": "pcm",
+          "record_id": "F40_pcm"
+        },
+        {
+          "language": "en_pcm",
+          "record_id": "F40_en_pcm"
+        }
+      ],
+      "status": "brief_only_not_evaluation_input"
+    }
+  ]
+}

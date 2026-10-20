@@ -1,0 +1,29 @@
+{
+  "name": "permission-study-collector",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "prepare:scenarios": "node scripts/copy-scenarios.mjs",
+    "predev": "npm run prepare:scenarios",
+    "dev": "next dev",
+    "prebuild": "npm run prepare:scenarios",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test tests/transcription.test.ts tests/collection.test.ts tests/presentation.test.ts tests/cloud.test.ts"
+  },
+  "dependencies": {
+    "@vercel/blob": "2.8.2",
+    "fflate": "0.8.3",
+    "next": "16.4.2",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2"
+  }
+}
