@@ -1,0 +1,61 @@
+/* Shared sizing also covers browser-native audio controls. */
+.app-shell, .app-shell main, .studio-navbar > *, .top-actions,
+.story-workspace, .dialogue-column, .shopper-turn, .filler-field { min-width: 0; }
+.app-shell audio { display: block; width: 100%; min-width: 0; max-width: 100%; margin-top: 12px; }
+.app-shell textarea, .app-shell select, .app-shell input:not([type=checkbox]) { max-width: 100%; }
+.app-shell .notice, .turn-brief, .assistant-turn p, .filler-card h2 { overflow-wrap: anywhere; }
+.filler-main { max-width: 1080px; padding: 28px 5% 40px; }
+.filler-card { text-align: left; }
+.filler-card h1 { font-size: clamp(28px, 5vw, 43px); }
+.filler-card h2 { font-size: clamp(20px, 3vw, 27px); line-height: 1.5; margin: 16px 0; }
+.filler-card > p { max-width: none; margin: 14px 0; }
+.filler-card .language-tabs { flex-wrap: wrap; margin: 22px 0; }
+.filler-card .scenario-top { flex-wrap: wrap; gap: 10px; margin: 20px 0; }
+.filler-field { background: #f4ecfa; border: 1px solid #bda4c8; border-radius: 18px; padding: 18px; margin: 20px 0; }
+.filler-field textarea { min-height: 150px; }
+.filler-field .record-row { margin-top: 12px; }
+.filler-card label.verification { display: flex; flex-direction: row; align-items: flex-start; gap: 12px; line-height: 1.6; }
+.filler-card label.verification input { flex-shrink: 0; margin-top: 4px; }
+
+@media (max-width: 740px) {
+  .studio-navbar { position: static; padding-top: max(12px, env(safe-area-inset-top)); }
+  .studio-navbar > .button { grid-column: 1 / -1; width: 100%; }
+  .studio-navbar .brand { flex-wrap: wrap; overflow-wrap: anywhere; }
+  .studio-navbar .nav-answer-count { min-width: 92px; padding: 6px 8px; }
+  .studio-navbar .top-actions { flex-wrap: wrap; gap: 10px; }
+  .app-shell .button, .app-shell .language-tabs button,
+  .app-shell .text-button, .app-shell select { min-height: 44px; }
+  .app-shell textarea, .app-shell select,
+  .app-shell input:not([type=checkbox]) { font-size: 16px; }
+  .app-shell textarea::placeholder { font-size: 14px; }
+  .app-shell input[type=checkbox] { width: 20px; height: 20px; flex-shrink: 0; }
+  .app-shell .record-row { gap: 12px; }
+  .app-shell .record-row .button { flex: 1 1 180px; white-space: normal; }
+  .app-shell .record-row small, .app-shell .record-hint { flex-basis: 100%; max-width: none; font-size: 12px; }
+  .app-shell .provider-row { align-items: stretch; }
+  .app-shell .provider-row > label { flex-basis: 100%; }
+  .app-shell .provider-row select { flex: 1 1 130px; width: 0; min-width: 0; }
+  .app-shell .provider-row .button { flex: 1 1 150px; white-space: normal; }
+  .story-workspace .language-tabs, .filler-card .language-tabs { display: grid; grid-template-columns: 1fr; gap: 10px; }
+  .story-workspace .language-tabs button, .filler-card .language-tabs button { width: 100%; font-size: 14px; padding: 12px; }
+  .app-shell .scenario-top { flex-wrap: wrap; gap: 10px; }
+  .app-shell .scenario-nav { gap: 12px; }
+  .app-shell .scenario-nav .button { min-width: 0; padding: 14px 10px; font-size: 14px; }
+  .story-workspace .jump-row { display: grid; grid-template-columns: minmax(0, 1fr); }
+  .story-workspace .jump-row select { width: 100%; max-width: 100%; font-size: 16px; }
+  .app-shell footer { padding-bottom: max(24px, env(safe-area-inset-bottom)); }
+  .filler-main { padding: 18px 4% max(28px, env(safe-area-inset-bottom)); }
+  .filler-card { padding: 20px 16px; border-radius: 22px; }
+  .filler-field { padding: 14px; }
+}
+
+@media (max-width: 380px) {
+  .studio-navbar { gap: 8px; padding-left: 4%; padding-right: 4%; }
+  .studio-navbar .brand { font-size: 12px; gap: 8px; }
+  .studio-navbar .brand small { max-width: 145px; }
+  .studio-navbar .brand-mark { width: 30px; height: 30px; font-size: 26px; }
+  .activity-main { padding-left: 4%; padding-right: 4%; }
+  .story-workspace, .welcome-setup { padding: 15px; }
+  .welcome-hero h1 { font-size: 36px; }
+  .welcome-drawing { max-width: 260px; }
+}
