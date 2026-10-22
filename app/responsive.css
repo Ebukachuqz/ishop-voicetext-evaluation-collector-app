@@ -1,4 +1,10 @@
 /* Shared sizing also covers browser-native audio controls. */
+.scenario-context-card { display: flex; align-items: flex-start; gap: 14px; background: #fff0cc; border: 2px solid #bf9452; border-radius: 18px; padding: 18px; margin-bottom: 20px; }
+.scenario-context-card > div { min-width: 0; }
+.scenario-context-card h3 { font-size: 18px; margin: 0 0 8px; }
+.scenario-context-card p { font-size: 14px; line-height: 1.7; overflow-wrap: anywhere; }
+.scenario-context-card blockquote { background: #fffdf5; border: 1px solid #c4a373; border-left: 5px solid #a97ad2; border-radius: 10px; padding: 15px; margin: 14px 0 0; font-size: 18px; font-weight: 700; line-height: 1.6; }
+.context-card-symbol { font-size: 28px; flex-shrink: 0; }
 .reuse-notice { background: #e9f2dd; border: 1px solid #97ae7e; border-radius: 12px; padding: 14px; margin-top: 14px; font-size: 13px; line-height: 1.6; }
 .reuse-notice p { margin-top: 6px; }
 .reuse-notice small { display: block; margin-top: 6px; }
@@ -30,6 +36,8 @@
 .filler-card label.verification input { flex-shrink: 0; margin-top: 4px; }
 
 @media (max-width: 740px) {
+  .scenario-context-card { padding: 14px; gap: 10px; }
+  .scenario-context-card blockquote { font-size: 16px; padding: 12px; }
   .pair-guide-cards { grid-template-columns: 1fr; }
   .pair-guide { padding: 14px; }
   .studio-navbar { position: static; padding-top: max(12px, env(safe-area-inset-top)); }

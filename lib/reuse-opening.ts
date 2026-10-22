@@ -1,4 +1,5 @@
 import { collectionRecordKey } from "./collection";
+import { contextForLanguage } from "./scenario-context";
 import type { CollectionRecord, Consent, Language, Scenario, ScenarioPacket } from "./types";
 
 function canonical(value: unknown): string {
@@ -11,7 +12,7 @@ export function openingSignature(scenario: Scenario, language: Language) {
   if (first?.role !== "user") return null;
   const next = scenario.dialogue_slots.findIndex((slot,i) => i > 0 && slot.role === "user");
   if (next < 0) return null;
-  return canonical({setting:scenario.setting[language], brief:first.brief[language], state:scenario.initial_state,
+  return canonical({setting:scenario.setting[language], brief:first.brief[language], state:scenario.initial_state, visibleContext:contextForLanguage(scenario.id,language),
     assistantContext:scenario.dialogue_slots.slice(1,next)});
 }
 

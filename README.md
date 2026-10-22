@@ -32,6 +32,8 @@ Use `/activities` for the 120 main conversation versions. Use `/filler` after th
 
 For main stories, a checked opening can pre-fill another story only when the selected-language brief, setting, trusted state and assistant context match. This includes stories 11–14 across their two pairs; eligibility is checked against all 40 stories rather than limited to a single pair. The source must belong to the same contributor, language and packet version. Existing destination turns are never replaced. Reused openings require a fresh check and retain source-record, turn, revision, context and timestamp provenance in `reusedFrom`; source audio is referenced rather than recorded again. Editing either story does not update the other. Stories 25/26 and 33/34 require separate openings. The 240 turn fields therefore need not represent 240 independently authored or recorded answers.
 
+Context cards precede recording fields when a brief refers to material that needs establishing: the quoted product description in stories 27/28, an imaginary example in 29/30, and the blue/black comparison in 19/20 and 35/36. These cards supply situation context rather than a shopper answer to recite. Their selected-language content is included in the opening-reuse compatibility check. Supplied assistant replies and saved contributions are unchanged.
+
 ## Checks
 
 ```sh

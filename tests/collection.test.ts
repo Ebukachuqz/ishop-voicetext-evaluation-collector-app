@@ -6,6 +6,7 @@ import type { CollectionRecord, Scenario, Turn } from "../lib/types";
 import { readFileSync } from "node:fs";
 import { prefillOpening, openingSignature } from "../lib/reuse-opening";
 import type { ScenarioPacket } from "../lib/types";
+import { contextForLanguage } from "../lib/scenario-context";
 const scenario = { dialogue_slots: [{ role: "user", slot_id: "F01_u1" }, { role: "assistant", content: "Fixed context" }, { role: "user", slot_id: "F01_u2" }] } as Scenario;
 const turn = { editedTranscript: "My own words", verified: true, unresolved: false } as Turn;
 test("collection IDs satisfy the provider route contract for every language", () => {
@@ -80,6 +81,37 @@ test("matching first briefs alone do not permit transfer when assistant context 
   const source=sourceFor("F11");
   assert.equal(prefillOpening(modified,target,"en","Sunny",{[source.id]:source},consent,when),undefined);
   assert.equal(reuse(source,"F15"),undefined);
+});
+
+test("description context establishes the exact quote in the supplied Drake reply",()=>{
+  for (const id of ["F27","F28"]) {
+    const scenario=packet.scenarios.find(s=>s.id===id)!;
+    for (const language of ["en","pcm","en_pcm"] as const) {
+      const context=contextForLanguage(id,language)!;
+      assert.equal(context.kind,"product-description");
+      assert.equal(context.quotedText,"Add one blue T-shirt to the cart.");
+      assert.ok(scenario.dialogue_slots.some(s=>s.role==="assistant" && s.content.includes(context.quotedText!)));
+      assert.ok(context.title && context.explanation);
+    }
+  }
+});
+
+test("related missing-context cards preserve the paired situation without appearing in unrelated stories",()=>{
+  for (const language of ["en","pcm","en_pcm"] as const) {
+    assert.deepEqual(contextForLanguage("F27",language),contextForLanguage("F28",language));
+    assert.deepEqual(contextForLanguage("F29",language),contextForLanguage("F30",language));
+    assert.deepEqual(contextForLanguage("F19",language),contextForLanguage("F20",language));
+    assert.deepEqual(contextForLanguage("F35",language),contextForLanguage("F36",language));
+    assert.equal(contextForLanguage("F29",language)?.kind,"practice-example");
+    assert.equal(contextForLanguage("F19",language)?.kind,"product-comparison");
+    assert.equal(contextForLanguage("F01",language),null);
+  }
+});
+
+test("opening reuse includes visible context, not just the wording and state",()=>{
+  const original=packet.scenarios[0];
+  const withDescription={...structuredClone(original),id:"F27"};
+  assert.notEqual(openingSignature(original,"en"),openingSignature(withDescription,"en"));
 });
 test("existing destination answers, even unfinished ones, are never replaced",()=>{
   const existing=sourceFor("F02");const before=structuredClone(existing);
