@@ -1,4 +1,13 @@
 /* Shared sizing also covers browser-native audio controls. */
+.pair-guide { background: #eaf3dc; border: 2px solid #86a66d; border-radius: 18px; padding: 18px; margin: 0 0 22px; }
+.pair-guide h3 { font-size: 18px; margin: 0 0 8px; }
+.pair-guide > p { font-size: 14px; line-height: 1.6; }
+.pair-guide-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 14px 0; }
+.pair-guide-cards section { border: 1px solid #aab89c; border-radius: 12px; padding: 14px; background: #fffdf5; }
+.pair-guide-cards .pair-guide-current { border: 2px solid #71509a; background: #eee1ff; }
+.pair-guide-cards p { font-size: 14px; line-height: 1.6; margin-top: 7px; }
+.pair-guide small { display: block; font-size: 12px; }
+.answer-reading-order { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; font-size: 13px; }
 .app-shell, .app-shell main, .studio-navbar > *, .top-actions,
 .story-workspace, .dialogue-column, .shopper-turn, .filler-field { min-width: 0; }
 .app-shell audio { display: block; width: 100%; min-width: 0; max-width: 100%; margin-top: 12px; }
@@ -18,6 +27,8 @@
 .filler-card label.verification input { flex-shrink: 0; margin-top: 4px; }
 
 @media (max-width: 740px) {
+  .pair-guide-cards { grid-template-columns: 1fr; }
+  .pair-guide { padding: 14px; }
   .studio-navbar { position: static; padding-top: max(12px, env(safe-area-inset-top)); }
   .studio-navbar > .button { grid-column: 1 / -1; width: 100%; }
   .studio-navbar .brand { flex-wrap: wrap; overflow-wrap: anywhere; }
