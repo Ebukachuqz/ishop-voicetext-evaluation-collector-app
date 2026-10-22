@@ -25,7 +25,7 @@ export function prefillOpening(packet: ScenarioPacket, scenario: Scenario, langu
   const signature = openingSignature(scenario,language);
   if (!signature) return;
   for (const other of packet.scenarios) {
-    if (other.id === scenario.id || other.context_group !== scenario.context_group || openingSignature(other,language) !== signature) continue;
+    if (other.id === scenario.id || openingSignature(other,language) !== signature) continue;
     const sourceId = collectionRecordKey(packet.schema_version,participant,other.id,language);
     const source = records[sourceId]; const sourceSlot = other.dialogue_slots[0];
     if (!source || sourceSlot.role !== "user" || source.participant !== participant || source.language !== language || source.packetVersion !== packet.schema_version) continue;

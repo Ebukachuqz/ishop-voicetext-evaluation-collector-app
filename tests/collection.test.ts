@@ -55,6 +55,32 @@ test("matching openings reuse one source recording with unconfirmed provenance a
     assert.equal(source.turns.F01_u1.editedTranscript,"My checked opening");
   }
 });
+
+test("stories 11 through 14 share eligible openings across pair boundaries in every language",()=>{
+  for (const language of ["en","pcm","en_pcm"] as const) {
+    for (const from of ["F11","F12","F13","F14"]) {
+      for (const to of ["F11","F12","F13","F14"]) {
+        if (from === to) continue;
+        const source=sourceFor(from,language);
+        const destination=reuse(source,to)!;
+        assert.ok(destination,`${from} -> ${to} ${language}`);
+        assert.equal(destination.turns[to+"_u1"].reusedFrom?.recordId,source.id);
+        assert.equal(destination.turns[to+"_u1"].verified,false);
+        assert.equal(destination.turns[to+"_u2"],undefined);
+        assert.equal(reuse(source,to,sourceFor(to,language)),undefined);
+      }
+    }
+  }
+});
+
+test("matching first briefs alone do not permit transfer when assistant context differs",()=>{
+  const modified=structuredClone(packet);
+  const target=modified.scenarios.find(s=>s.id==="F13")!;
+  target.dialogue_slots[1]={role:"assistant",content:"A different fact was supplied."};
+  const source=sourceFor("F11");
+  assert.equal(prefillOpening(modified,target,"en","Sunny",{[source.id]:source},consent,when),undefined);
+  assert.equal(reuse(source,"F15"),undefined);
+});
 test("existing destination answers, even unfinished ones, are never replaced",()=>{
   const existing=sourceFor("F02");const before=structuredClone(existing);
   assert.equal(reuse(sourceFor(),"F02",existing),undefined);
