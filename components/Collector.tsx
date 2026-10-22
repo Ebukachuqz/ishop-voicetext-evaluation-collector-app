@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { syncCloud } from "@/lib/cloud";
 import ShoppingUpdates from "./ShoppingUpdates";
 import PairGuide from "./PairGuide";
+import { prefillOpening } from "@/lib/reuse-opening";
 import { checkedAnswers, friendlyTranscriptionError, languageNames } from "@/lib/presentation";
 import { downloadBlob, exportCollection, importCollection } from "@/lib/export";
 import ProductArt from "./ProductArt";
@@ -117,6 +118,11 @@ export default function Collector({screen = "welcome"}: {screen?: "welcome" | "a
     const old = base.turns[slotId] ?? freshTurn(slotId);
     persist({ ...base, contextConfirmed: false, turns: { ...base.turns, [slotId]: { ...old, ...patch } } });
   }
+  useEffect(() => {
+    if (!loaded || screen !== "activity" || !packet || !scenario || !validParticipant || recording || busy || recoveryAudio) return;
+    const next = prefillOpening(packet, scenario, language, participant, records, consentDefaults, new Date().toISOString());
+    if (next) persist(next);
+  }, [loaded, screen, packet, scenario, validParticipant, recording, busy, recoveryAudio, language, participant, records, consentDefaults]);
   function changeLocation(nextIndex: number, nextLanguage = language) {
     if (recording || busy) { setNotice("Finish this recording or transcription before changing scenario."); return; }
     setIndex(nextIndex); setLanguage(nextLanguage); setNotice("");
@@ -303,6 +309,7 @@ export default function Collector({screen = "welcome"}: {screen?: "welcome" | "a
     const turn = current?.turns[slot.slot_id] ?? freshTurn(slot.slot_id);
     const active = recording === slot.slot_id;
     return <article className={`shopper-turn ${active ? "is-recording" : ""}`}><div className="turn-title"><span className="avatar shopper">You</span><span>YOUR ANSWER {number}</span>{turn.verified && !turn.unresolved && <span className="verified-tag">Checked ✓</span>}</div><p className="turn-brief">{slot.brief[language]}</p><div className="record-row"><button className={`button record-button ${active ? "recording" : ""}`} onClick={() => active ? stopRecording() : startRecording(slot.slot_id)} disabled={!validParticipant || !!busy || (!!recording && !active)}><Icon name={active ? "stop" : "mic"}/>{active ? `Stop · ${Math.floor(elapsed / 60)}:${String(elapsed % 60).padStart(2, "0")}` : turn.audioId ? "Record again" : "Record my answer"}</button><span className="record-hint">{active ? <><span className="record-dot"/>Listening · up to 2 minutes</> : turn.audioId ? "Recording saved on this device" : "Your microphone is off until you press record"}</span></div><AudioPlayer audioId={turn.audioId}/>
+      {turn.reusedFrom && <div className="reuse-notice" role="note"><strong>Opening pre-filled from story {Number(turn.reusedFrom.scenarioId.slice(1))} · {languageLabels[language]}</strong><p>The opening situation matches. Review or edit these words, then tick the answer check below to confirm they fit this story. You can replay the original recording or record a new answer. Your second answer still needs to follow this story.</p>{turn.verified && <small>You have checked this answer for the current story.</small>}</div>}
       <div className="provider-row"><label htmlFor={`${slot.slot_id}-provider`}>Write my recording using</label><select id={`${slot.slot_id}-provider`} value={turn.provider} disabled={!!recording || !!busy} onChange={event => patchTurn(slot.slot_id, {provider: event.target.value as Provider})}><option value="elevenlabs">ElevenLabs</option><option value="sahara">Sahara</option></select><button className="button outlined compact" onClick={() => transcribe(slot.slot_id)} disabled={!turn.audioId || !!recording || !!busy}>{busy === slot.slot_id ? "Writing your words…" : "Turn it into words"}</button></div>
       {turn.originalTranscript && <details className="machine-transcript"><summary>See what the writing service heard</summary><p>{turn.originalTranscript}</p></details>}
       <label className="field-label" htmlFor={`${slot.slot_id}-text`}>{turn.audioId ? "Do these words match what you said?" : "Or type what you would say"}</label><textarea id={`${slot.slot_id}-text`} value={turn.editedTranscript} placeholder="Your words will appear here. Fix any words the service heard wrongly, or type your answer yourself." disabled={!validParticipant || !!recording || !!busy} onChange={event => patchTurn(slot.slot_id, {editedTranscript: event.target.value, verified: false, source: turn.audioId ? "recording" : "manual"})} onBlur={() => logEdit(slot.slot_id)}/><small className="transcript-guidance">Keep repeated words and little words such as “um”. If you changed your mind while speaking, keep that too. If your answer does not fit the story, record again. We never rewrite your words.</small>

@@ -13,6 +13,7 @@ export type ScenarioPacket = {
 };
 export type Consent = { privateCloud?: boolean; processing: boolean; publicText: boolean; publicAudio: boolean };
 export type Turn = {
+  reusedFrom?: { recordId: string; scenarioId: string; slotId: string; sourceUpdatedAt: string; reusedAt: string; contextSignature: string };
   slotId: string; provider: Provider; audioId?: string; audioMime?: string;
   durationSeconds?: number; originalTranscript: string; editedTranscript: string;
   source: "recording" | "manual"; verified: boolean; unresolved: boolean;

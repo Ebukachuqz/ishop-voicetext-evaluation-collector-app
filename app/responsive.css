@@ -1,4 +1,7 @@
 /* Shared sizing also covers browser-native audio controls. */
+.reuse-notice { background: #e9f2dd; border: 1px solid #97ae7e; border-radius: 12px; padding: 14px; margin-top: 14px; font-size: 13px; line-height: 1.6; }
+.reuse-notice p { margin-top: 6px; }
+.reuse-notice small { display: block; margin-top: 6px; }
 .pair-guide { background: #eaf3dc; border: 2px solid #86a66d; border-radius: 18px; padding: 18px; margin: 0 0 22px; }
 .pair-guide h3 { font-size: 18px; margin: 0 0 8px; }
 .pair-guide > p { font-size: 14px; line-height: 1.6; }
